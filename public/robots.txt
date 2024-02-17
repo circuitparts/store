@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /account/
+Disallow: /api/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /coming-soon/
+Disallow: /order-history/
+Disallow: /order-status/
+Disallow: /products/
+

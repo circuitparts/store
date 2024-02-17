@@ -1,0 +1,64 @@
+"use client";
+import { CurrencyContext } from "@/context/currency-context";
+import {
+	selectNetPrice,
+	selectOrderedQty,
+	selectRigidPcbSpecsForQuote,
+	selectTentativeDispatchDate,
+	selectUnitPrice,
+} from "@/lib/redux/reducers/rigid-pcb-slice";
+import { useDispatch, useSelector } from "@/lib/redux/store";
+import { calculateRigidPcbPrice } from "@/lib/redux/thunks";
+import { LineSkeleton } from "@/components/ui/line-skeleton";
+import { convertAndFormatCurrency } from "@/lib/utils";
+import { useContext, useEffect, useState } from "react";
+
+export function RigidPcbPriceSummary() {
+	const dispatch = useDispatch();
+	const rigidPcb = useSelector(selectRigidPcbSpecsForQuote);
+	const orderedQuantity = useSelector(selectOrderedQty);
+	const tentativeDispatchDate = useSelector(selectTentativeDispatchDate);
+	const [isLoading, setIsLoading] = useState(false);
+	const { currency } = useContext(CurrencyContext);
+	const unitPrice = useSelector(selectUnitPrice);
+	const unitPriceFormatted = convertAndFormatCurrency(unitPrice, currency);
+	const pcbPrice = useSelector(selectNetPrice);
+	const netPriceFormatted = convertAndFormatCurrency(pcbPrice, currency);
+
+	// when a rigid pcb form field updates, recalculate the price.
+	useEffect(() => {
+		setIsLoading(true);
+		async function calculatePrice() {
+			await dispatch(calculateRigidPcbPrice(rigidPcb));
+		}
+		calculatePrice()
+			.then(() => setIsLoading(false))
+			.catch(console.error);
+	}, [dispatch, rigidPcb]);
+
+	return (
+		<div className="rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:p-8">
+			<h2 className="mb-8 text-xl font-semibold tracking-tight">Estimated Price</h2>
+			<div className="flow-root">
+				<div className="-my-4 divide-y divide-gray-300 text-sm">
+					<div className="flex items-center justify-between py-4">
+						<p>Unit Price</p>
+						{isLoading ? <LineSkeleton /> : <p className="font-medium">{unitPriceFormatted}</p>}
+					</div>
+					<div className="flex items-center justify-between py-4">
+						<p>Quantity</p>
+						{isLoading ? <LineSkeleton /> : <p className="font-medium">{orderedQuantity}</p>}
+					</div>
+					<div className="flex items-center justify-between py-4">
+						<p className="text-base font-medium">Order total</p>
+						{isLoading ? <LineSkeleton /> : <p className="text-base font-medium">{netPriceFormatted}</p>}
+					</div>
+					<div className="flex items-center justify-between py-4">
+						<p className="">Tentative Lead Time</p>
+						{isLoading ? <LineSkeleton /> : <p className="font-medium">{tentativeDispatchDate}</p>}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}

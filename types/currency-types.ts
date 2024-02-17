@@ -1,0 +1,1 @@
+export type CurrencyType = "usd" | "inr" | "eur" | "gbp" | "aud";
