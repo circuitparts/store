@@ -19,6 +19,7 @@ export default authMiddleware({
 		"/shipping-and-returns",
 		"/terms-and-conditions",
 		"/coming-soon",
+		"/docs(.*)",
 	],
 	afterAuth(auth, req) {
 		// redirect to login who aren't authenticated
