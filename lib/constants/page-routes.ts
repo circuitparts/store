@@ -1,11 +1,9 @@
-import { BASE_APP_URL } from "@/lib/constants/app";
-
 export const HOME_PAGE = "/";
 
 // API endpoints
-export const ORDER_NOTIFICATION_EMAIL_ENDPOINT = `${BASE_APP_URL}/api/order-email`;
-export const SIGNUP_NOTIFICATION_EMAIL_ENDPOINT = `${BASE_APP_URL}/api/signup-email`;
-export const UPLOAD_FILE_API_ENDPOINT = BASE_APP_URL + "/api/upload-file";
+export const ORDER_NOTIFICATION_EMAIL_ENDPOINT = "/api/order-email";
+export const SIGNUP_NOTIFICATION_EMAIL_ENDPOINT = "/api/signup-email";
+export const UPLOAD_FILE_API_ENDPOINT = "/api/upload-file";
 export const BOM_PARSER_API_ENDPOINT = "/api/bom-parser";
 export const STRIPE_CHECKOUT_API_ENDPOINT = "/api/stripe-checkout";
 export const STRIPE_CHECKOUT_SESSION_API_ENDPOINT = "/api/stripe-checkout?session_id=";
@@ -20,6 +18,8 @@ export const PCB_ASSEMBLY_PAGE = "/products/pcb/assembly";
 export const PCB_TECH_CAPABILITIES_PAGE = "/products/pcb/capabilities";
 export const INVENTORY_MANAGEMENT_PAGE = "/coming-soon";
 export const UPLOAD_BOM_PAGE = "/products/part/bom";
+export const STM32MP1_RESULTS_PAGE_URL = "/products/part/result/STM32MP1";
+export const NRF52832_DETAILS_PAGE_URL = "/products/part/detail/NRF52832-QFAA-R7";
 
 // auth pages
 export const AUTH_PAGES = "/auth";
