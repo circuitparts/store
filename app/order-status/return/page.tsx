@@ -18,7 +18,7 @@ type FetchResponseType = {
 
 export default function StripeReturn() {
 	const searchParams = useSearchParams();
-	const sessionId = searchParams.get("session_id");
+	const sessionId = searchParams?.get("session_id");
 	const [checkoutStatus, setCheckoutStatus] = useState<Stripe.Checkout.Session.Status | null>(null);
 	const [paymentIntent, setPaymentIntent] = useState<Stripe.PaymentIntent | null>(null);
 	const router = useRouter();
