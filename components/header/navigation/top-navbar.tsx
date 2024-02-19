@@ -1,7 +1,6 @@
 "use client";
 import { navigationOptions } from "@/components/header/navigation/navigation-options";
-import { HOME_PAGE } from "@/lib/constants/page-routes";
-import { PLATFORM_NAME } from "@/lib/constants/app";
+import { Icons } from "@/components/ui/icons";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -9,9 +8,11 @@ import {
 	NavigationMenuList,
 	navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { PLATFORM_NAME } from "@/lib/constants/app";
+import { DOCS_PAGE, HOME_PAGE } from "@/lib/constants/page-routes";
+import logo from "@/public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/images/logo.png";
 
 export function TopNavbar() {
 	return (
@@ -42,8 +43,18 @@ export function TopNavbar() {
 							</Link>
 						</NavigationMenuItem>
 					))}
+					<NavigationMenuItem>
+						<Link
+							href={DOCS_PAGE}
+							legacyBehavior
+							passHref>
+							<NavigationMenuLink target="_blank" className={navigationMenuTriggerStyle()}>
+								Docs <Icons.MdArrowOutward className="h-4 w-4"/>
+							</NavigationMenuLink>
+						</Link>
+					</NavigationMenuItem>
 				</NavigationMenuList>
 			</NavigationMenu>
 		</div>
-	);
+	)
 }

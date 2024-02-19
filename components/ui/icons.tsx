@@ -12,8 +12,8 @@ import { CgDisplayFlex } from "react-icons/cg";
 import { FaRegFilePdf } from "react-icons/fa6";
 import { GiFlexibleLamp, GiHelp } from "react-icons/gi";
 import { ImWarning } from "react-icons/im";
-import { IoIosArrowDown } from "react-icons/io";
-import { MdInventory, MdDownload, MdDelete } from "react-icons/md";
+import { IoIosArrowDown, IoMdDocument } from "react-icons/io";
+import { MdDelete, MdDownload, MdInventory, MdArrowOutward } from "react-icons/md";
 import { RiRoadMapLine } from "react-icons/ri";
 import { TfiLayers } from "react-icons/tfi";
 
@@ -291,6 +291,8 @@ export const Icons = {
 	Pdf: FaRegFilePdf as JSX.ElementType,
 	ImWarning: ImWarning as JSX.ElementType,
 	IoIosArrowDown: IoIosArrowDown as JSX.ElementType,
+	IoMdDocument: IoMdDocument as JSX.ElementType,
+	MdArrowOutward: MdArrowOutward as JSX.ElementType,
 
 	// radix-ui/react-icons | hero icons
 	HeartFilledIcon,

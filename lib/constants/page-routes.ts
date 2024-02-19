@@ -50,3 +50,6 @@ export const TERMS_AND_CONDITIONS_PAGE = "/terms-and-conditions";
 export const SHIPPING_AND_RETURNS_PAGE = "/shipping-and-returns";
 export const CONTACT_US_PAGE = "/contact-us";
 export const COMING_SOON_PAGE = "/coming-soon";
+
+// docs
+export const DOCS_PAGE = "/docs";
