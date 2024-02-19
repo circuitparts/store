@@ -64,4 +64,4 @@ Contributions to Circuit Parts are welcome and highly appreciated. However, befo
 Head over to our [Docs](https://circuitparts.in/docs) page to find instructions on how to setup the project on your local machine and start tinkering. Happy coding!
 
 ## Security
-If you believe you have found a security vulnerability in the platform, we encourage you to **responsibly disclose this and NOT open a public issue**. We will investigate all legitimate reports. Email [help@vcircuitparts.in](mailto:help@vcircuitparts.in) to disclose any security vulnerabilities.
+If you believe you have found a security vulnerability in the platform, we encourage you to **responsibly disclose this and NOT open a public issue**. We will investigate all legitimate reports. Email [help@circuitparts.in](mailto:help@circuitparts.in) to disclose any security vulnerabilities.
