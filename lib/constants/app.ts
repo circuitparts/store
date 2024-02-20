@@ -1,19 +1,8 @@
-// Constants used across the monorepo.
-
 import { env } from "@/env";
 
 export const PLATFORM_NAME = "Circuit Parts";
 export const PLATFORM_DESCRIPTION = "Electronic Components, PCB Fabrication & Assembly, all at one place.";
 export const PLATFORM_ORIGIN_COUNTRY = "India";
-
-// URLs
-export const LIVE_APP_URL = env.NEXT_PUBLIC_LIVE_APP_URL;
-export const DEV_APP_URL = env.NEXT_PUBLIC_DEV_APP_URL;
-export const BASE_APP_URL = process.env.NODE_ENV === "production" ? LIVE_APP_URL : DEV_APP_URL;
-
-// search hint urls
-export const STM32MP1_RESULTS_PAGE_URL = `${BASE_APP_URL}/products/part/result/STM32MP1`;
-export const NRF52832_DETAILS_PAGE_URL = `${BASE_APP_URL}/products/part/detail/NRF52832-QFAA-R7`;
 
 // api endpoints
 export const PRODUCTS_API_ENDPOINT = "https://api.circuitparts.in/api";
@@ -21,9 +10,6 @@ export const PARTS_API_ENDPOINT = `${PRODUCTS_API_ENDPOINT}/parts?mpn=`;
 export const RIGID_PCB_API_ENDPOINT = `${PRODUCTS_API_ENDPOINT}/rigid-pcb`;
 export const FLEX_PCB_API_END_POINT = `${PRODUCTS_API_ENDPOINT}/flex-pcb`;
 export const PCB_ASSEMBLY_API_ENDPOINT = `${PRODUCTS_API_ENDPOINT}/pcb-assembly`;
-
-// templates
-export const BOM_TEMPLATE_URL = "s3://e-store-public-bucket/Circuit-Parts-BOM-Template.csv";
 
 // Email addresses
 export const UPDATES_NOTIFICATION_EMAIL = env.NEXT_PUBLIC_UPDATES_EMAIL_ADDR;
@@ -76,8 +62,7 @@ export const CONSOLE_YELLOW_TEXT = "\x1b[33m%s\x1b[0m";
 // Database constants
 export const DB_NAME = env.NEXT_PUBLIC_DB_NAME;
 export const DB_COLLECTIONS = {
-	openOrdersCollection: "openOrders",
-	closedOrdersCollection: "closedOrders",
+	openOrdersCollection: "openOrders", // for admin
 	guestCartsCollection: "guestCarts",
 	usersCollection: "users",
 };

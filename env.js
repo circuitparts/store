@@ -21,8 +21,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().min(1),
 		NEXT_PUBLIC_IP_INFO_API_KEY: z.string().min(1),
 		NEXT_PUBLIC_DB_NAME: z.string().min(1),
-		NEXT_PUBLIC_LIVE_APP_URL: z.string().min(1),
-		NEXT_PUBLIC_DEV_APP_URL: z.string().min(1),
+		NEXT_PUBLIC_APP_URL: z.string().min(1),
 		NEXT_PUBLIC_UPDATES_EMAIL_ADDR: z.string().min(1),
 	},
 	runtimeEnv: {
@@ -60,8 +59,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_DB_NAME: process.env.NEXT_PUBLIC_DB_NAME,
 
 		// app url
-		NEXT_PUBLIC_LIVE_APP_URL: process.env.NEXT_PUBLIC_LIVE_APP_URL,
-		NEXT_PUBLIC_DEV_APP_URL: process.env.NEXT_PUBLIC_DEV_APP_URL,
+		NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
 
 		// updates email
 		NEXT_PUBLIC_UPDATES_EMAIL_ADDR: process.env.NEXT_PUBLIC_UPDATES_EMAIL_ADDR,

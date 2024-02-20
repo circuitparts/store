@@ -5,17 +5,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { AuthProvider } from "@/context/auth-context";
 import { CurrencyProvider } from "@/context/currency-context";
 import { ReduxProvider } from "@/context/redux-context";
-import { BASE_APP_URL } from "@/lib/constants/app";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { env } from "@/env";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	metadataBase: new URL(BASE_APP_URL),
+	metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
 	title: "Circuit Parts | Open-source E-Commerce shopping platform for embedded electronics",
 	description: "Open-source E-Commerce shopping platform for embedded electronics",
 	icons: [{ rel: "icon", url: "/favicon.ico" }],
