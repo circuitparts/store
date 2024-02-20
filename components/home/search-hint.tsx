@@ -1,4 +1,4 @@
-import { NRF52832_DETAILS_PAGE_URL, STM32MP1_RESULTS_PAGE_URL } from "@/lib/constants/app";
+import { NRF52832_DETAILS_PAGE_URL, STM32MP1_RESULTS_PAGE_URL } from "@/lib/constants/page-routes";
 import Link from "next/link";
 
 export function SearchHint() {

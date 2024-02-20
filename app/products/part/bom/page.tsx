@@ -1,12 +1,11 @@
 "use client";
 import { useHandleFileUploadError } from "@/components/hooks/useHandleFileUploadError";
 import { ButtonWithSpinner } from "@/components/ui/button-with-spinner";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
 import { BOM_PARSER_API_ENDPOINT, SHOPPING_CART_PAGE } from "@/lib/constants/page-routes";
 import { addMultiplePartsToCartAction } from "@/lib/server-actions/cart-actions";
-import { Input } from "@/components/ui/input";
-import { BOM_TEMPLATE_URL } from "@/lib/constants/app";
 import type { SortedResultsType } from "@/types/part-types";
-import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 
@@ -70,7 +69,7 @@ export default function UploadBomPage() {
 					<span>
 						<a
 							className="underline"
-							href={BOM_TEMPLATE_URL}
+							href="/bom_template.csv"
 							download={"Circuit_parts_bom_template"}>
 							Download Circuit Parts BOM Template
 						</a>

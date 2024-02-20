@@ -1,13 +1,6 @@
 import { env } from "@/env";
+import { CONSOLE_RED_TEXT, STATUS_BAD_REQUEST, STATUS_INTERNAL_SERVER_ERROR, STATUS_OK } from "@/lib/constants/app";
 import { mongoClient, usersCollection } from "@/lib/constants/mongo";
-import { auth } from "@clerk/nextjs";
-import {
-	CONSOLE_RED_TEXT,
-	STATUS_BAD_REQUEST,
-	STATUS_INTERNAL_SERVER_ERROR,
-	STATUS_OK,
-	BASE_APP_URL,
-} from "@/lib/constants/app";
 import {
 	calculateCartSubtotal,
 	calculateSalesTax,
@@ -18,6 +11,7 @@ import {
 } from "@/lib/utils";
 import type { CurrencyType } from "@/types/currency-types";
 import type { UserType } from "@/types/user-types";
+import { auth } from "@clerk/nextjs";
 import Stripe from "stripe";
 
 const stripe = new Stripe(env.STRIPE_SECRET_KEY);
@@ -114,7 +108,7 @@ export async function POST(request: Request) {
 				},
 			],
 			mode: "payment",
-			return_url: `${BASE_APP_URL}/order-status/return?session_id={CHECKOUT_SESSION_ID}`,
+			return_url: `${env.NEXT_PUBLIC_APP_URL}/order-status/return?session_id={CHECKOUT_SESSION_ID}`,
 		});
 		return new Response(JSON.stringify({ clientSecret: session.client_secret ?? "" }), { status: STATUS_OK });
 	} catch (error) {

@@ -7,4 +7,3 @@ export const database = mongoClient.db(DB_NAME);
 export const usersCollection = database.collection(DB_COLLECTIONS.usersCollection);
 export const guestCartsCollection = database.collection(DB_COLLECTIONS.guestCartsCollection);
 export const openOrdersCollection = database.collection(DB_COLLECTIONS.openOrdersCollection);
-export const closedOrdersCollection = database.collection(DB_COLLECTIONS.closedOrdersCollection);
