@@ -1,5 +1,7 @@
 {
-	"docs": "Getting Started",
+	"docs": "Introduction",
+	"getting-started": "Getting Started",
 	"installation": "Installation",
-	"project-structure": "Project Structure"
+	"project-structure": "Project Structure",
+	"contributions": "Contributions"
 }
