@@ -1,0 +1,87 @@
+import { Callout } from "nextra/components";
+
+# Project Structure
+
+This page provides an overview of the project structure of Circuit Parts application. It covers top-level files and folders, configuration files, and routing conventions within the app and pages directories.
+
+## Top-Level Folders
+
+Top-level folders are used to organize your application's code and static assets.
+
+| Path         | Description                                 |
+| ------------ | ------------------------------------------- |
+| `app`        | Nextjs App Router                           |
+| `components` | React components for the website            |
+| `content`    | The content and static data for the website |
+| `context`    | React context hooks for state management    |
+| `lib`        | Utility functions used by the application   |
+| `pages`      | Nextjs Pages Router                         |
+| `public`     | Static assets to be served                  |
+| `types`      | Typescript type definitions and interfaces  |
+| `.husky`     | Tool for managing git hooks                 |
+
+## Top-Level Files
+
+Top-level files are used to configure your application, manage dependencies, run middleware, integrate monitoring tools, and define environment variables.
+
+| File                                                                                        | Description                                                    |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [`next.config.js`](/docs/app/api-reference/next-config-js)                                  | Configuration file for Next.js                                 |
+| [`package.json`](/docs/getting-started/installation#manual-installation)                    | Project dependencies and scripts                               |
+| [`middleware.ts`](/docs/app/building-your-application/routing/middleware)                   | Next.js request middleware                                     |
+| [`.env`](/docs/app/building-your-application/configuring/environment-variables)             | Environment variables                                          |
+| [`.env.local`](/docs/app/building-your-application/configuring/environment-variables)       | Local environment variables                                    |
+| [`.env.production`](/docs/app/building-your-application/configuring/environment-variables)  | Production environment variables                               |
+| [`.env.development`](/docs/app/building-your-application/configuring/environment-variables) | Development environment variables                              |
+| [`.eslintrc.json`](/docs/app/building-your-application/configuring/eslint)                  | Configuration file for ESLint                                  |
+| `.eslintignore`                                                                             | Configuration file for ESLint to ignore specific files/folders |
+| `.gitignore`                                                                                | Git files and folders to ignore                                |
+| `tsconfig.json`                                                                             | Configuration file for TypeScript                              |
+| `tailwind.config.ts`                                                                        | Configuration file for Tailwind CSS                            |
+| `env.js`                                                                                    | Configuration file for Environmental Variables                 |
+
+## Routing files
+
+The following file conventions are used to define routes [`app` router](https://nextjs.org/docs/app)
+
+| Route       | Extension | Description  |
+| ----------- | --------- | ------------ |
+| `layout`    | `.tsx`    | Layout       |
+| `page`      | `.tsx`    | Page         |
+| `loading`   | `.tsx`    | Loading UI   |
+| `not-found` | `.tsx`    | Not found UI |
+| `error`     | `.tsx`    | Error UI     |
+| `route`     | `.ts`     | API endpoint |
+
+## Nested Route Conventions
+
+| Route           | Description          |
+| --------------- | -------------------- |
+| `folder`        | Route segment        |
+| `folder/folder` | Nested Route segment |
+
+<Callout type="info">
+**Good to know:** The following naming conventions are used for nested routes:
+
+-   If the route name is a single word: **`folder`**. Example: **`checkout`**
+-   If the route name uses multiple words: **`folder-folder`**. Example: **`order-history`**
+
+</Callout>
+
+## SEO File Conventions
+
+| File      | Extension | Description                    |
+| --------- | --------- | ------------------------------ |
+| `favicon` | `.ico`    | Favicon file                   |
+| `sitemap` | `.ts`     | Dynamic site map generater     |
+| `robots`  | `.txt`    | Robots file for search engines |
+
+## Lib Folder
+
+| File/Directory   | Description                                     |
+| ---------------- | ----------------------------------------------- |
+| `constants`      | Global constants used by the application        |
+| `redux`          | Redux reducers and config files                 |
+| `schema`         | Yup and zod schema files                        |
+| `server-actions` | Nextjs server actions                           |
+| `utils.ts`       | Utility functions used accross the application. |
