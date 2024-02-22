@@ -66,4 +66,4 @@ Head over to our [Docs](https://www.circuitparts.in/docs) page to find instructi
 
 ## Security
 
-If you believe you have found a security vulnerability in the platform, we encourage you to **responsibly disclose this and NOT open a public issue**. We will investigate all legitimate reports. Email [help@circuitparts.in](mailto:help@circuitparts.in) to disclose any security vulnerabilities.
+Check out our [Security Policy](SECURITY.md) to understand how we handle security vulnerabilities.
