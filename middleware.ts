@@ -2,25 +2,12 @@ import { AUTH_PAGES } from "@/lib/constants/page-routes";
 import { authMiddleware } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
+const privateRoutes = ["account", "checkout", "order-history", "order-status"];
+const publicRoutesRegExp = new RegExp(`^(?!\/(${privateRoutes.join("|")})).*$`); // Matches any route that doesn't start with /account, /checkout, /order-history, or /order-status
+
 export default authMiddleware({
 	// Public routes are routes that don't require authentication
-	publicRoutes: [
-		"/",
-		"/api(.*)",
-		"/auth/login",
-		"/auth/signup",
-		"/auth/signup/verify-email",
-		"/auth/reset-password",
-		"/auth/reset-password/step2",
-		"/products(.*)",
-		"/contact-us",
-		"/cart",
-		"/privacy-policy",
-		"/shipping-and-returns",
-		"/terms-and-conditions",
-		"/coming-soon",
-		"/docs(.*)",
-	],
+	publicRoutes: [publicRoutesRegExp],
 	afterAuth(auth, req) {
 		// redirect to login who aren't authenticated
 		if (!auth.userId && !auth.isPublicRoute) {
@@ -36,5 +23,5 @@ export default authMiddleware({
 });
 
 export const config = {
-	matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+	matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api)(.*)"],
 };
