@@ -1,6 +1,12 @@
 # Introduction
 
-Welcome to the Circuit Parts documentation!
+Welcome to the Circuit Parts Documentation. These pages are primarily intended for those who wish to contribute to the project by submitting bug reports, suggesting new features, building extensions, or even commenting on new ideas.
+
+Please refer to the sidebar (on the left) for details on Project Management, Contributing, and Documentation.
+
+If you want to take a look at the platform, please visit our website on [www.circuitparts.in](https://circuitparts.in/).
+
+[![CircuitParts](../public/images//screenshots//home.png)](https://circuitparts.in/)
 
 ## What is Circuit Parts?
 
@@ -17,5 +23,3 @@ Now imagine you were to design and build this product. After months of work, you
 ### Our Solution
 
 We engineered a new approach — A digital quote-to-order platform. It provides a convenient place for individuals and businesses to purchase electronic and semiconductor components, upload designs and receive instant quotes for PCB fabrication and assembly, all in one place, eliminating the need to navigate multiple websites.
-
-[![CircuitParts](../public/images/screenshots/cart.png)](https://circuitparts.in/)

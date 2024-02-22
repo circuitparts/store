@@ -13,6 +13,22 @@ This style guide is applicable to code written in the following languages:
 
 You can find the table of contents for this document on the right side of the page. It is recommended to read through the entire document to get a good understanding of the coding style. However, if you are looking for something specific, you can use the table of contents to jump to that section.
 
+### File and Folder Naming Conventions
+
+-   Try to use short and descriptive names for files and folders.
+-   If a name has multiple words in it, use a hyphen to separate the words.
+
+```sh
+# bad, uses camelCase
+touch myFile.tsx;
+
+# good, uses hyphen to separate words
+touch my-file.tsx;
+
+# good, uses hyphen to separate words
+mkdir -p my-folder && touch my-folder/my-file.txt
+```
+
 ### Naming Conventions
 
 -   Always use PascalCase and suffix with the word `Type` when defining new types in TypeScript.
