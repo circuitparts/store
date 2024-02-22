@@ -4,5 +4,11 @@
 	"installation": "Installation",
 	"project-structure": "Project Structure",
 	"contributions": "Contributions",
-	"roadmap": "Roadmap"
+	"roadmap": "Roadmap",
+	"website": {
+		"title": "Circuit Parts ↗",
+		"type": "page",
+		"href": "https://www.circuitparts.in",
+		"newWindow": true
+	}
 }
