@@ -58,10 +58,12 @@ Go ahead and hit the star button located at the top right of this page to keep t
 
 ## Contributing
 
-Contributions to Circuit Parts are welcome and highly appreciated. However, before you jump right into it, we would like you to review our [Contribution Guidelines](CONTRIBUTIONS.MD) to make sure you have a smooth experience contributing to this project.
+Contributions to Circuit Parts are welcome and highly appreciated. However, before you jump right into it, we would like you to review our [Contribution Guidelines](https://www.circuitparts.in/contributions/how-to-contribute) to make sure you have a smooth experience contributing to this project.
 
 ## Getting Started
-Head over to our [Docs](https://circuitparts.in/docs) page to find instructions on how to setup the project on your local machine and start tinkering. Happy coding!
+
+Head over to our [Docs](https://www.circuitparts.in/docs) page to find instructions on how to setup the project on your local machine and start tinkering. Happy coding!
 
 ## Security
+
 If you believe you have found a security vulnerability in the platform, we encourage you to **responsibly disclose this and NOT open a public issue**. We will investigate all legitimate reports. Email [help@circuitparts.in](mailto:help@circuitparts.in) to disclose any security vulnerabilities.
