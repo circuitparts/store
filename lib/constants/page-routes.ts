@@ -50,6 +50,14 @@ export const TERMS_AND_CONDITIONS_PAGE = "/terms-and-conditions";
 export const SHIPPING_AND_RETURNS_PAGE = "/shipping-and-returns";
 export const CONTACT_US_PAGE = "/contact-us";
 export const COMING_SOON_PAGE = "/coming-soon";
+export const ABOUT_PAGE = "/about";
+export const HELP_PAGE = "/help";
+export const BLOG_PAGE = "/blog";
 
 // docs
 export const DOCS_PAGE = "/docs";
+
+// github
+export const GITHUB_REPO = "https://github.com/circuitparts/store";
+export const GITHUB_ISSUES = "https://github.com/circuitparts/store/issues";
+export const GITHUB_DISCUSSIONS = "https://github.com/circuitparts/store/discussions";

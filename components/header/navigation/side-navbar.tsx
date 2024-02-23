@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { PLATFORM_NAME } from "@/lib/constants/app";
-import { DOCS_PAGE, HOME_PAGE } from "@/lib/constants/page-routes";
+import { HOME_PAGE } from "@/lib/constants/page-routes";
 import logo from "@/public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -53,18 +53,6 @@ export function SideNavbar() {
 						</Link>
 					</Button>
 				))}
-				<Button
-					asChild
-					variant="link"
-					className="flex justify-start gap-x-3 hover:bg-slate-950 hover:text-white hover:no-underline">
-					<Link href={DOCS_PAGE}>
-						<Icons.IoMdDocument
-							className="h-6 w-6 shrink-0"
-							aria-hidden="true"
-						/>
-						Docs
-					</Link>
-				</Button>
 			</SheetContent>
 		</Sheet>
 	);
