@@ -9,10 +9,11 @@ We describe some initiatives as "investigations" or "explorations" which means o
 As always we have a ton of stuff on our roadmap that will be available for our users in the coming months.
 
 1. **Project Management Tool:** This tool helps users to create a new project and add their parts to the project, whether a bunch of components of PCB Fabrication specifications. This allows the user to organise their shopping list as per their projects and order the parts at their convenience with just a couple of clicks.
-2. **Download ECAD symbols, Footprints and 3D models:** When a user searches for a part on the platform, an associated ECAD symbol, footprint and 3D models for the part will be visible to the user and a compatible version of the model can be downloaded on to their system.
-3. **Electronic Design Calculators:** No more manual calculations. Use our calculators to get the right values based on the current IPC standards.
-4. **Extensions for ECAD tools:** Extensions that integrate with the user’s ECAD tool and seamlessly lets them order components and PCBs from within your CAD tools.
-5. **Inventory management:** Organise inventory with our inventory management tool that seamlessly integrates with our ordering platform letting users order parts with just couple of clicks.
+2. **AI based part recommendation:** Our AI based recommendation system will suggest the best parts for your project based on your requirements.
+3. **Download ECAD symbols, Footprints and 3D models:** When a user searches for a part on the platform, an associated ECAD symbol, footprint and 3D models for the part will be visible to the user and a compatible version of the model can be downloaded on to their system.
+4. **Electronic Design Calculators:** No more manual calculations. Use our calculators to get the right values based on the current IPC standards.
+5. **Extensions for ECAD tools:** Extensions that integrate with the user’s ECAD tool and seamlessly lets them order components and PCBs from within your CAD tools.
+6. **Inventory management:** Organise inventory with our inventory management tool that seamlessly integrates with our ordering platform letting users order parts with just couple of clicks.
 
 **Conclusion**:
 

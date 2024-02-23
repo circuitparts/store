@@ -1,5 +1,9 @@
 {
-  "signup-account": "Sign up for an account",
-  "order-component": "Order components",
-  "order-pcb": "Order PCBs"
+	"signup-account": "Sign up for an account",
+	"order-component": "Search and Order components",
+	"order-pcb": "Order PCB Fabrication and Assembly",
+	"change-currency": "Change Currency",
+	"manage-cart": "Manage your Cart",
+	"checkout": "Checkout and Place Order",
+	"order-history": "View Order History"
 }
