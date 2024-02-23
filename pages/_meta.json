@@ -1,9 +1,8 @@
 {
 	"docs": "Introduction",
-	"getting-started": "Getting Started",
-	"installation": "Installation",
-	"project-structure": "Project Structure",
-	"contributions": "Contributions",
+	"what-is-circuit-parts": "What is Circuit Parts?",
+	"how-to-guide": "How to Guide",
+	"contributors-guide": "Contributor's Guide",
 	"roadmap": "Roadmap",
 	"website": {
 		"title": "Circuit Parts ↗",
