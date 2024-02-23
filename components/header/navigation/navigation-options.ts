@@ -1,10 +1,12 @@
 import { Icons } from "@/components/ui/icons";
 import {
+	BLOG_PAGE,
 	FLEX_PCB_FAB_PAGE,
+	HELP_PAGE,
 	HOME_PAGE,
 	PCB_ASSEMBLY_PAGE,
 	PCB_TECH_CAPABILITIES_PAGE,
-	RIGID_PCB_FAB_PAGE
+	RIGID_PCB_FAB_PAGE,
 } from "@/lib/constants/page-routes";
 
 export const navigationOptions = [
@@ -37,5 +39,17 @@ export const navigationOptions = [
 		name: "Technical Capabilities",
 		href: PCB_TECH_CAPABILITIES_PAGE,
 		icon: Icons.BsRocket,
+	},
+	{
+		id: 6,
+		name: "Help",
+		href: HELP_PAGE,
+		icon: Icons.GiHelp,
+	},
+	{
+		id: 7,
+		name: "Blog",
+		href: BLOG_PAGE,
+		icon: Icons.IoMdDocument,
 	},
 ];
