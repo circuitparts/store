@@ -1,4 +1,4 @@
-# Getting Started
+# Start Contributing
 
 ## How to Use These Docs
 

@@ -10,7 +10,7 @@
   <a href="https://discord.gg/B4CCqBEH"><strong>Discord</strong></a> ·
   <a href="https://www.circuitparts.in"><strong>Website</strong></a> ·
   <a href="https://github.com/circuitparts/store/issues"><strong>Issues</strong></a> ·
-  <a href="#roadmap"><strong>Roadmap</strong></a>
+  <a href="https://circuitparts.in/roadmap"><strong>Roadmap</strong></a>
 </p>
 
 ## About Circuit Parts
@@ -58,7 +58,7 @@ Go ahead and hit the star button located at the top right of this page to keep t
 
 ## Contributing
 
-Contributions to Circuit Parts are welcome and highly appreciated. However, before you jump right into it, we would like you to review our [Contribution Guidelines](https://www.circuitparts.in/contributions/how-to-contribute) to make sure you have a smooth experience contributing to this project.
+Contributions to Circuit Parts are welcome and highly appreciated. However, before you jump right into it, we would like you to review our [Contribution Guidelines](https://www.circuitparts.in/contributors-guide/intro) to make sure you have a smooth experience contributing to this project.
 
 ## Getting Started
 

@@ -1,4 +1,5 @@
 "use client";
+import { AssemblyPcbPriceSummary } from "@/components/products/pcb/assembly/assembly-pcb-price-summary";
 import { AssemblyBgaComponentsQuantity } from "@/components/products/pcb/assembly/fields/assembly-bga-quantity";
 import { AssemblyBoardType } from "@/components/products/pcb/assembly/fields/assembly-board-type";
 import { AssemblyComponentSourcing } from "@/components/products/pcb/assembly/fields/assembly-components-sourcing";
@@ -15,15 +16,16 @@ import { AssemblyThroughHoleComponentsQuantity } from "@/components/products/pcb
 import { AssemblyTurnAroundTime } from "@/components/products/pcb/assembly/fields/assembly-turn-around-time";
 import { AssemblyUniqueComponentsQuantity } from "@/components/products/pcb/assembly/fields/assembly-unique-comps-quantity";
 import { AssemblyUploadDesignFile } from "@/components/products/pcb/assembly/fields/assembly-upload-design-file";
-import { AssemblyPcbPriceSummary } from "@/components/products/pcb/assembly/assembly-pcb-price-summary";
 import { PcbPriceEstimateAlert } from "@/components/products/pcb/pcb-price-est-alert";
 import { ButtonWithSpinner } from "@/components/ui/button-with-spinner";
-import { selectPcbAssembly } from "@/lib/redux/reducers/pcb-assembly-slice";
-import type { PcbAssemblyFabSpecsType } from "@/types/pcb-assembly-types";
 import { useToast } from "@/components/ui/use-toast";
+import { PCB_FAB_HELP_PAGE } from "@/lib/constants/page-routes";
+import { selectPcbAssembly } from "@/lib/redux/reducers/pcb-assembly-slice";
+import { addItemToCartAction } from "@/lib/server-actions/cart-actions";
+import type { PcbAssemblyFabSpecsType } from "@/types/pcb-assembly-types";
+import Link from "next/link";
 import { useTransition, type FormEvent } from "react";
 import { useSelector } from "react-redux";
-import { addItemToCartAction } from "@/lib/server-actions/cart-actions";
 
 export default function PcbAssembly() {
 	const { toast } = useToast();
@@ -59,7 +61,7 @@ export default function PcbAssembly() {
 			<div className="mx-auto my-2 max-w-6xl px-4">
 				<h1 className=" text-3xl font-bold tracking-tight">PCB Assembly</h1>
 				<div className="grid grid-cols-1 gap-y-3 lg:grid-cols-3 lg:gap-x-4">
-					<div className="mt-8 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
+					<div className="mt-5 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
 						<AssemblyPcbName />
 						<AssemblyBoardType />
 						<AssemblyPcbsPerPanel />
@@ -86,6 +88,15 @@ export default function PcbAssembly() {
 							type="submit"
 							className="w-full"
 						/>
+						<p className="mt-2 text-sm text-muted-foreground">
+							Need help?{" "}
+							<Link
+								href={PCB_FAB_HELP_PAGE}
+								target="_blank"
+								className="underline">
+								Learn How to order PCB Assembly
+							</Link>
+						</p>
 					</div>
 				</div>
 			</div>

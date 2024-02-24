@@ -3,9 +3,10 @@ import { useHandleFileUploadError } from "@/components/hooks/useHandleFileUpload
 import { ButtonWithSpinner } from "@/components/ui/button-with-spinner";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { BOM_PARSER_API_ENDPOINT, SHOPPING_CART_PAGE } from "@/lib/constants/page-routes";
+import { BOM_HELP_PAGE, BOM_PARSER_API_ENDPOINT, SHOPPING_CART_PAGE } from "@/lib/constants/page-routes";
 import { addMultiplePartsToCartAction } from "@/lib/server-actions/cart-actions";
 import type { SortedResultsType } from "@/types/part-types";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 
@@ -63,9 +64,15 @@ export default function UploadBomPage() {
 			</p>
 			<p className="mt-4 mb-2 text-lg font-semibold">Things to keep in mind:</p>
 			<ul className="list-disc ml-6 space-y-1">
-				<li>At the moment we only support CSV file that is under 2MB.</li>
 				<li>
-					Please use our template to upload your BOM 👉{" "}
+					This tool is a relatively new feature and is still in beta. Occasionally it might produce errors.{" "}
+					Use this tool as a starting point and double check the components added to your cart before placing
+					your order.
+				</li>
+				<li>At the moment we only support CSV file that is under 2MB.</li>
+				<li>This tool works best when used with our template BOM template.</li>
+				<li>
+					Don&apos;t have a template?👉{" "}
 					<span>
 						<a
 							className="underline"
@@ -74,6 +81,15 @@ export default function UploadBomPage() {
 							Download Circuit Parts BOM Template
 						</a>
 					</span>
+				</li>
+				<li>
+					Need help? Learn{" "}
+					<Link
+						href={BOM_HELP_PAGE}
+						target="_blank"
+						className="underline">
+						How to use BOM tool
+					</Link>
 				</li>
 			</ul>
 			<div className="flex w-full max-w-sm items-center space-x-2">

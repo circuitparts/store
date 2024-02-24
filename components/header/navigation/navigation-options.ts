@@ -1,12 +1,12 @@
 import { Icons } from "@/components/ui/icons";
 import {
-	BLOG_PAGE,
+	DOCS_PAGE,
 	FLEX_PCB_FAB_PAGE,
-	HELP_PAGE,
+	HELP_CENTER_PAGE,
 	HOME_PAGE,
 	PCB_ASSEMBLY_PAGE,
 	PCB_TECH_CAPABILITIES_PAGE,
-	RIGID_PCB_FAB_PAGE,
+	RIGID_PCB_FAB_PAGE
 } from "@/lib/constants/page-routes";
 
 export const navigationOptions = [
@@ -42,14 +42,16 @@ export const navigationOptions = [
 	},
 	{
 		id: 6,
-		name: "Help",
-		href: HELP_PAGE,
+		name: "Help Center",
+		href: HELP_CENTER_PAGE,
 		icon: Icons.GiHelp,
+		target: "_blank",
 	},
 	{
 		id: 7,
-		name: "Blog",
-		href: BLOG_PAGE,
+		name: "Docs",
+		href: DOCS_PAGE,
 		icon: Icons.IoMdDocument,
+		target: "_blank",
 	},
 ];

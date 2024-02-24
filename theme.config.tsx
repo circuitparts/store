@@ -1,39 +1,28 @@
-import React from "react";
-import type { DocsThemeConfig } from "nextra-theme-docs";
-import Image from "next/image";
-import { PLATFORM_NAME } from "@/lib/constants/app";
-import logo from "@/public/images/logo.png";
 import { env } from "@/env";
+import { PLATFORM_NAME } from "@/lib/constants/app";
+import type { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
 	useNextSeoProps() {
 		return {
-			titleTemplate: `%s - ${PLATFORM_NAME} Documentation`,
-			description: `${PLATFORM_NAME} Documentation`,
+			titleTemplate: `%s - ${PLATFORM_NAME} Docs`,
+			description: `${PLATFORM_NAME} Docs`,
 			openGraph: {
 				type: "website",
 				locale: "en_US",
 				url: env.NEXT_PUBLIC_APP_URL,
-				site_name: `${PLATFORM_NAME} Documentation`,
+				site_name: `${PLATFORM_NAME} Docs`,
 			},
 		};
 	},
 	logo: (
-		<div style={{ display: "flex" }}>
-			<Image
-				src={logo}
-				alt="Logo"
-				height={20}
-				width={20}
-			/>
-			<p
-				style={{
-					fontWeight: "bold",
-					marginLeft: "0.5rem",
-				}}>
-				{PLATFORM_NAME} Documentation
-			</p>
-		</div>
+		<p
+			style={{
+				fontWeight: "bolder",
+				fontSize: "1.5rem",
+			}}>
+			{PLATFORM_NAME} Docs
+		</p>
 	),
 	project: {
 		link: "https://github.com/circuitparts/store",
@@ -41,7 +30,7 @@ const config: DocsThemeConfig = {
 	chat: {
 		link: "https://discord.gg/B4CCqBEH",
 	},
-	
+
 	darkMode: false,
 	docsRepositoryBase: "https://github.com/circuitparts/store/tree/main/pages",
 	footer: {

@@ -1,20 +1,20 @@
-import { NRF52832_DETAILS_PAGE_URL, STM32MP1_RESULTS_PAGE_URL } from "@/lib/constants/page-routes";
+import { STM32MP1_RESULTS_PAGE_URL } from "@/lib/constants/page-routes";
 import Link from "next/link";
 
 export function SearchHint() {
 	return (
 		<p className="text-center text-sm pb-2">
-			Try a partial search like{" "}
+			Try an example search:{" "}
 			<Link
 				className="underline"
 				href={STM32MP1_RESULTS_PAGE_URL}>
 				STM32MP1
 			</Link>{" "}
-			or an exact search like{" "}
+			Need help?{" "}
 			<Link
 				className="underline"
-				href={NRF52832_DETAILS_PAGE_URL}>
-				NRF52832-QFAA-R7
+				href={STM32MP1_RESULTS_PAGE_URL}>
+				Learn How to Search
 			</Link>
 		</p>
 	);

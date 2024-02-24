@@ -1,10 +1,14 @@
 {
 	"docs": "Introduction",
-	"getting-started": "Getting Started",
-	"installation": "Installation",
-	"project-structure": "Project Structure",
-	"contributions": "Contributions",
+	"about": "About Circuit Parts",
+	"help-center": "Help Center",
+	"contributors-guide": "Contributor's Guide",
 	"roadmap": "Roadmap",
+	"terms-and-conditions": "Terms and Conditions",
+	"privacy-policy": "Privacy Policy",
+	"shipping-and-returns": "Shipping & Returns",
+	"contact": "Contact Us",
+	"community": "Join our Community",
 	"website": {
 		"title": "Circuit Parts ↗",
 		"type": "page",

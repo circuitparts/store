@@ -19,7 +19,6 @@ export const PCB_TECH_CAPABILITIES_PAGE = "/products/pcb/capabilities";
 export const INVENTORY_MANAGEMENT_PAGE = "/coming-soon";
 export const UPLOAD_BOM_PAGE = "/products/part/bom";
 export const STM32MP1_RESULTS_PAGE_URL = "/products/part/result/STM32MP1";
-export const NRF52832_DETAILS_PAGE_URL = "/products/part/detail/NRF52832-QFAA-R7";
 
 // auth pages
 export const AUTH_PAGES = "/auth";
@@ -51,13 +50,21 @@ export const SHIPPING_AND_RETURNS_PAGE = "/shipping-and-returns";
 export const CONTACT_US_PAGE = "/contact-us";
 export const COMING_SOON_PAGE = "/coming-soon";
 export const ABOUT_PAGE = "/about";
-export const HELP_PAGE = "/help";
-export const BLOG_PAGE = "/blog";
+export const ROAD_MAP_PAGE = "/roadmap";
+// export const BLOG_PAGE = "/blog";
 
 // docs
 export const DOCS_PAGE = "/docs";
 
+// help center
+export const HELP_CENTER_PAGE = "/help-center/introduction";
+export const SEARCH_COMPONENTS_HELP_PAGE = "/help-center/search-component";
+export const BOM_HELP_PAGE = "/help-center/bom-tool";
+export const PCB_FAB_HELP_PAGE = "/help-center/order-pcb";
+export const CART_HELP_PAGE = "/help-center/manage-cart";
+export const CHECKOUT_HELP_PAGE = "/help-center/checkout";
+export const ORDER_HISTORY_HELP_PAGE = "/help-center/order-history";
+
 // github
 export const GITHUB_REPO = "https://github.com/circuitparts/store";
-export const GITHUB_ISSUES = "https://github.com/circuitparts/store/issues";
-export const GITHUB_DISCUSSIONS = "https://github.com/circuitparts/store/discussions";
+export const DISCORD_SERVER = "https://discord.gg/B4CCqBEH";
