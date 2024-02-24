@@ -3,39 +3,40 @@ import { Icons } from "@/components/ui/icons";
 import { PLATFORM_NAME, PLATFORM_ORIGIN_COUNTRY } from "@/lib/constants/app";
 import {
 	ABOUT_PAGE,
-	BLOG_PAGE,
 	CONTACT_US_PAGE,
+	DISCORD_SERVER,
 	DOCS_PAGE,
 	GITHUB_REPO,
-	HELP_PAGE,
+	HELP_CENTER_PAGE,
 	PRIVACY_POLICY_PAGE,
 	SHIPPING_AND_RETURNS_PAGE,
-	TERMS_AND_CONDITIONS_PAGE,
+	TERMS_AND_CONDITIONS_PAGE
 } from "@/lib/constants/page-routes";
 import { getCurrentYear } from "@/lib/utils";
 import Link from "next/link";
 
 const footerOptions = [
-	{ id: 1, name: "About", url: ABOUT_PAGE },
-	{ id: 2, name: "Privacy Policy", url: PRIVACY_POLICY_PAGE },
-	{ id: 3, name: "Terms & Conditions", url: TERMS_AND_CONDITIONS_PAGE },
-	{ id: 4, name: "Shipping & Returns", url: SHIPPING_AND_RETURNS_PAGE },
-	{ id: 5, name: "Contact Us", url: CONTACT_US_PAGE },
-	{ id: 6, name: "Help", url: HELP_PAGE },
-	{ id: 7, name: "Blog", url: BLOG_PAGE },
-	{ id: 8, name: "Github", url: GITHUB_REPO, target: "_blank" },
-	{ id: 9, name: "Docs", url: DOCS_PAGE, target: "_blank" },
+	{ id: 1, name: "About", url: ABOUT_PAGE, target: "_blank"},
+	{ id: 2, name: "Privacy Policy", url: PRIVACY_POLICY_PAGE, target: "_blank"},
+	{ id: 3, name: "Terms & Conditions", url: TERMS_AND_CONDITIONS_PAGE, target: "_blank"},
+	{ id: 4, name: "Shipping & Returns", url: SHIPPING_AND_RETURNS_PAGE, target: "_blank"},
+	{ id: 5, name: "Help Center", url: HELP_CENTER_PAGE, target: "_blank" },
+	{ id: 6, name: "Docs", url: DOCS_PAGE, target: "_blank" },
+	{ id: 7, name: "Github", url: GITHUB_REPO, target: "_blank" },
+	{ id: 8, name: "Discord", url: DISCORD_SERVER, target: "_blank" },
+	{ id: 9, name: "Contact Us", url: CONTACT_US_PAGE },
 ];
 
 export function Footer() {
 	const currYear = getCurrentYear();
 	return (
 		<footer className="mx-auto max-w-7xl overflow-hidden border-t px-6 py-10 lg:px-8 mt-6">
-			<nav className="mb-6 columns-2 sm:flex sm:justify-center">
+			<nav className="mb-6 grid grid-cols-2 md:flex md:justify-center">
 				{footerOptions.map(option => (
 					<Button
 						key={option.id}
 						variant={"link"}
+						className="justify-start"
 						asChild>
 						<Link
 							target={option.target ?? "_self"}

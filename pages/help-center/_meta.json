@@ -1,6 +1,8 @@
 {
+	"introduction": "Introduction",
 	"signup-account": "Sign up for an account",
 	"order-component": "Search and Order components",
+	"bom-tool": "Use BOM Tool to Order Components",
 	"order-pcb": "Order PCB Fabrication and Assembly",
 	"change-currency": "Change Currency",
 	"manage-cart": "Manage your Cart",

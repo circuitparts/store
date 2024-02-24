@@ -36,7 +36,9 @@ export function TopNavbar() {
 								href={option.href}
 								legacyBehavior
 								passHref>
-								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+								<NavigationMenuLink
+									className={navigationMenuTriggerStyle()}
+									target={option.target ?? "_self"}>
 									{option.name}
 								</NavigationMenuLink>
 							</Link>

@@ -63,9 +63,15 @@ export default function UploadBomPage() {
 			</p>
 			<p className="mt-4 mb-2 text-lg font-semibold">Things to keep in mind:</p>
 			<ul className="list-disc ml-6 space-y-1">
-				<li>At the moment we only support CSV file that is under 2MB.</li>
 				<li>
-					Please use our template to upload your BOM 👉{" "}
+					This tool is a relatively new feature and is still in beta. Occasionally it might produce errors.{" "}
+					Use this tool as a starting point and double check the components added to your cart before placing
+					your order.
+				</li>
+				<li>At the moment we only support CSV file that is under 2MB.</li>
+				<li>This tool works best when used with our template BOM template.</li>
+				<li>
+					Don&apos;t have a template?👉{" "}
 					<span>
 						<a
 							className="underline"
