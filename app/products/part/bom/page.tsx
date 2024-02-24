@@ -3,9 +3,10 @@ import { useHandleFileUploadError } from "@/components/hooks/useHandleFileUpload
 import { ButtonWithSpinner } from "@/components/ui/button-with-spinner";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { BOM_PARSER_API_ENDPOINT, SHOPPING_CART_PAGE } from "@/lib/constants/page-routes";
+import { BOM_HELP_PAGE, BOM_PARSER_API_ENDPOINT, SHOPPING_CART_PAGE } from "@/lib/constants/page-routes";
 import { addMultiplePartsToCartAction } from "@/lib/server-actions/cart-actions";
 import type { SortedResultsType } from "@/types/part-types";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 
@@ -80,6 +81,15 @@ export default function UploadBomPage() {
 							Download Circuit Parts BOM Template
 						</a>
 					</span>
+				</li>
+				<li>
+					Need help? Learn{" "}
+					<Link
+						href={BOM_HELP_PAGE}
+						target="_blank"
+						className="underline">
+						How to use BOM tool
+					</Link>
 				</li>
 			</ul>
 			<div className="flex w-full max-w-sm items-center space-x-2">

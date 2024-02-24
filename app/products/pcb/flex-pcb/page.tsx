@@ -34,10 +34,12 @@ import { FlexUploadDesignFile } from "@/components/products/pcb/flex/fields/flex
 import { FlexPcbPriceSummary } from "@/components/products/pcb/flex/flex-pcb-price-summary";
 import { PcbPriceEstimateAlert } from "@/components/products/pcb/pcb-price-est-alert";
 import { ButtonWithSpinner } from "@/components/ui/button-with-spinner";
+import { useToast } from "@/components/ui/use-toast";
+import { PCB_FAB_HELP_PAGE } from "@/lib/constants/page-routes";
 import { selectFlexPcb } from "@/lib/redux/reducers/flex-pcb-slice";
 import { addItemToCartAction } from "@/lib/server-actions/cart-actions";
 import type { FlexPcbFabSpecsType } from "@/types/flex-pcb-types";
-import { useToast } from "@/components/ui/use-toast";
+import Link from "next/link";
 import { useTransition, type FormEvent } from "react";
 import { useSelector } from "react-redux";
 
@@ -75,7 +77,7 @@ export default function FlexPcbFabrication() {
 			<div className="mx-auto my-2 max-w-6xl px-4">
 				<h1 className=" text-3xl font-bold tracking-tight">Flex Pcb Fabrication</h1>
 				<div className="grid grid-cols-1 gap-y-3 lg:grid-cols-3 lg:gap-x-4">
-					<div className="mt-8 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
+					<div className="mt-5 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
 						<FlexPcbName />
 						<FlexBaseMaterial />
 						<FlexLayer />
@@ -118,6 +120,15 @@ export default function FlexPcbFabrication() {
 							type="submit"
 							className="w-full"
 						/>
+						<p className="mt-2 text-sm text-muted-foreground">
+							Need help?{" "}
+							<Link
+								href={PCB_FAB_HELP_PAGE}
+								target="_blank"
+								className="underline">
+								Learn How to order Flex PCB
+							</Link>
+						</p>
 					</div>
 				</div>
 			</div>

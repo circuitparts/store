@@ -5,10 +5,12 @@ import { CheckoutButton } from "@/components/cart/checkout-button";
 import { EmptyShoppingCart } from "@/components/cart/empty-shopping-cart";
 import { CartPricingSummary } from "@/components/cart/price-summary/cart-pricing-summary";
 import { TaxAndShippingEstimateAlert } from "@/components/cart/price-summary/tax-shipping-price-alert";
-import { fetchCartItemsAction } from "@/lib/server-actions/cart-actions";
 import { PLATFORM_NAME } from "@/lib/constants/app";
+import { CART_HELP_PAGE } from "@/lib/constants/page-routes";
+import { fetchCartItemsAction } from "@/lib/server-actions/cart-actions";
 import { getAllParts, getAllPcbs } from "@/lib/utils";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: `Shopping Cart | ${PLATFORM_NAME}`,
@@ -39,6 +41,15 @@ export default async function ShoppingCart() {
 					<BackOrderedPartsAlert cart={cart} />
 					<TaxAndShippingEstimateAlert />
 					<CheckoutButton />
+					<p className="mt-2 text-sm text-muted-foreground">
+						Need help?{" "}
+						<Link
+							href={CART_HELP_PAGE}
+							target="_blank"
+							className="underline">
+							Learn How to manage your cart
+						</Link>
+					</p>
 				</div>
 			</div>
 		</div>

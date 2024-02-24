@@ -1,13 +1,15 @@
 "use client";
 import { BackorderedComponentsTip } from "@/components/order-history/back-ordered-components-tip";
 import { ButtonWithSpinner } from "@/components/ui/button-with-spinner";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
+import { SEARCH_COMPONENTS_HELP_PAGE } from "@/lib/constants/page-routes";
 import { partOrderSchema } from "@/lib/schema/yup-schema";
 import { addItemToCartAction } from "@/lib/server-actions/cart-actions";
-import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import type { PartDataType } from "@/types/part-types";
-import { useToast } from "@/components/ui/use-toast";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import Link from "next/link";
 import { useTransition } from "react";
 
 export function PartOrderForm({ partData }: { partData: PartDataType }) {
@@ -73,6 +75,15 @@ export function PartOrderForm({ partData }: { partData: PartDataType }) {
 								type="submit"
 								className="w-full"
 							/>
+							<p className="mt-2 text-sm text-muted-foreground">
+								Need help?{" "}
+								<Link
+									href={SEARCH_COMPONENTS_HELP_PAGE}
+									target="_blank"
+									className="underline">
+									Learn How to order components
+								</Link>
+							</p>
 							<div
 								className={cn(
 									"space-x-1 mt-1 justify-center",

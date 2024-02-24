@@ -44,6 +44,8 @@ import type { RigidPcbFabSpecsType } from "@/types/rigid-pcb-types";
 import { useToast } from "@/components/ui/use-toast";
 import { useTransition, type FormEvent } from "react";
 import { useSelector } from "react-redux";
+import Link from "next/link";
+import { PCB_FAB_HELP_PAGE } from "@/lib/constants/page-routes";
 
 export default function RigidPcbFabrication() {
 	const { toast } = useToast();
@@ -78,7 +80,7 @@ export default function RigidPcbFabrication() {
 			<div className="mx-auto my-2 max-w-6xl px-4">
 				<h1 className=" text-3xl font-bold tracking-tight">Rigid Pcb Fabrication</h1>
 				<div className="grid grid-cols-1 gap-y-3 lg:grid-cols-3 lg:gap-x-4">
-					<div className="mt-8 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
+					<div className="mt-5 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
 						<RigidPcbName />
 						<RigidBaseMaterial />
 						<RigidLayer />
@@ -125,6 +127,15 @@ export default function RigidPcbFabrication() {
 							type="submit"
 							className="w-full"
 						/>
+						<p className="mt-2 text-sm text-muted-foreground">
+							Need help?{" "}
+							<Link
+								href={PCB_FAB_HELP_PAGE}
+								target="_blank"
+								className="underline">
+								Learn How to order Rigid PCB
+							</Link>
+						</p>
 					</div>
 				</div>
 			</div>
