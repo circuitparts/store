@@ -34,6 +34,7 @@ export function SearchPartForm() {
 								<SearchInput />
 							</div>
 							<ButtonWithSpinner
+								data-testid="search-component-button"
 								isLoading={isLoading}
 								label={"Search"}
 							/>

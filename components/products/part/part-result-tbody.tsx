@@ -26,11 +26,12 @@ export function PartResultTableBody(props: { parts: Record<string, PartDataType>
 				}
 				return (
 					<TableRow
+						data-testid="part-results-table-row"
 						key={partNumber}
 						className="cursor-pointer"
 						onClick={() => router.push(PART_DETAILS_PAGE + partNumber)}>
 						<TableCell className="font-medium">{index + 1}</TableCell>
-						<TableCell>
+						<TableCell data-testid="part-results-part-number">
 							{partNumber}
 							<PartResultMobileView
 								Description={Description}

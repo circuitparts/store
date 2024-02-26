@@ -7,6 +7,7 @@ export function SearchInput() {
 		<>
 			<Label className="sr-only">Search</Label>
 			<Field
+				data-testid="search-component-input"
 				as={Input}
 				autoComplete="off"
 				name="query"
