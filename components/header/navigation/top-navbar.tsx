@@ -37,6 +37,7 @@ export function TopNavbar() {
 								legacyBehavior
 								passHref>
 								<NavigationMenuLink
+									data-testid={option.testid}
 									className={navigationMenuTriggerStyle()}
 									target={option.target ?? "_self"}>
 									{option.name}
