@@ -122,3 +122,40 @@ test("flex pcb flow", async ({ page }) => {
 	await page.getByTestId("flex-pcb-upload-design-file-button").click();
 	await expect(page.getByTestId("toast-title")).toHaveText("File upload success");
 });
+
+/* PCB ASSEMBLY FLOW TEST
+ * This test will check the pcb assembly flow. It will navigate to the pcb assembly page, fill name, change qty, and upload a design file.
+ * It will then check if the file upload success toast is displayed.
+ *
+ * This test will confirm the following:
+ * 1. PCB Assembly API is working (price updated)
+ * 2. Upload design file is working
+ */
+test("pcb assembly flow", async ({ page }) => {
+	await page.goto("http://localhost:3000/");
+	await page.getByTestId("pcb-assembly-nav-link").click();
+	await expect(page).toHaveURL("http://localhost:3000/products/pcb/assembly");
+	await expect(page.getByTestId("pcb-assembly-fab-title")).toHaveText("PCB Assembly");
+
+	// set pcb name and keep remaining fields default
+	const testPcbName = "lalalala";
+	await page.getByTestId("pcb-assembly-name").fill(testPcbName);
+	await expect(page.getByTestId("pcb-assembly-name")).toHaveValue(testPcbName);
+
+	// wait for the debounce to complete
+	await page.waitForTimeout(2000);
+
+	// change quantity and see if the price is updated
+	await page.getByTestId("pcb-assembly-quantity").fill("15");
+	await expect(page.getByTestId("pcb-assembly-quantity")).toHaveValue("15");
+	await expect(page.getByTestId("price-summary-assembly-quantity")).toHaveText("15");
+	await expect(page.getByTestId("pcb-assembly-order-total")).toHaveText("₹10,831.50");
+
+	// upload design file
+	const fileChooserPromise = page.waitForEvent("filechooser");
+	await page.getByTestId("pcb-assembly-fab-upload-design-file").click();
+	const fileChooser = await fileChooserPromise;
+	await fileChooser.setFiles(path.join(__dirname, "test.zip"));
+	await page.getByTestId("pcb-assembly-fab-upload-design-file-button").click();
+	await expect(page.getByTestId("toast-title")).toHaveText("File upload success");
+});
