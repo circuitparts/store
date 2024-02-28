@@ -12,7 +12,7 @@ export async function BasketPartsTable(props: { parts: PartDataType[] }) {
 			<h3 className="text-lg font-semibold">Components</h3>
 			<Table>
 				<TableHeader>
-					<TableRow>
+					<TableRow data-testid="basket-parts-thead-row">
 						<TableHead className="w-[10px]">S.No.</TableHead>
 						<TableHead>Component Details</TableHead>
 						<TableHead className="w-[230px] hidden lg:table-cell">Quantity</TableHead>

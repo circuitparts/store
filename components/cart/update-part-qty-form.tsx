@@ -34,6 +34,7 @@ export function UpdatePartQuantityForm(props: { part: PartDataType }) {
 				<Form>
 					<div className="flex items-center space-x-2 w-3/4 md:w-5/12 lg:w-full">
 						<Field
+							data-testid="update-part-qty-input"
 							as={Input}
 							type="number"
 							name="orderQty"
@@ -41,6 +42,7 @@ export function UpdatePartQuantityForm(props: { part: PartDataType }) {
 							placeholder="Enter Quantity"
 						/>
 						<ButtonWithSpinner
+							data-testid="update-part-qty-button"
 							isLoading={isLoading}
 							label="Update"
 							type="submit"

@@ -21,6 +21,7 @@ export function DeleteCartItemButton({ itemName, itemType, ...buttonProps }: Del
 
 	return (
 		<Button
+			data-testid="delete-cart-item-button"
 			disabled={isLoading}
 			size={"sm"}
 			variant={"ghost"}
@@ -57,6 +58,7 @@ export function DeleteAllCartItemsButton({ itemType, ...buttonProps }: DeleteAll
 
 	return (
 		<Button
+			data-testid="delete-all-cart-items-button"
 			disabled={isLoading}
 			size={"sm"}
 			variant={"ghost"}

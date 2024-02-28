@@ -117,3 +117,40 @@ test("add pcb assembly to cart", async ({ page }) => {
 	// check if the cart size increased
 	await expect(page.getByTestId("cart-qty")).toHaveText(`${Number(cartSize) + 1}`);
 });
+
+// cart
+test("cart functionality", async ({ page }) => {
+	// add to cart
+	await page.goto("http://localhost:3000/");
+	await page.getByTestId("search-component-input").fill(testPartNumber);
+	await page.getByTestId("search-component-button").click();
+
+	// let's add the first 3 parts to the cart
+	for (let i = 0; i < 3; i++) {
+		await page.getByTestId("part-results-table-row").nth(i).click(); // navigate to the detail page
+		await page.getByTestId("add-part-to-cart-button").click();
+		await expect(page.getByTestId("toast-title")).toHaveText("Added to cart");
+		await expect(page.getByTestId("cart-qty")).toHaveText(`${i + 1}`); // cart size should increase
+		await page.goBack();
+	}
+
+	// check if the cart size is 3
+	await expect(page.getByTestId("cart-qty")).toHaveText("3");
+
+	// navigate to cart
+	await page.goto("http://localhost:3000/cart");
+
+	// select first component and delete it
+	await page.getByTestId("basket-parts-tbody-row").nth(0).getByTestId("delete-cart-item-button").click();
+
+	// check if the cart size decreased
+	await expect(page.getByTestId("cart-qty")).toHaveText("2");
+
+	// delete all items from cart
+	await page.getByTestId("basket-parts-thead-row").getByTestId("delete-all-cart-items-button").click();
+
+	// check if the cart size is 0
+	await expect(page.getByTestId("cart-qty")).toHaveText("0");
+
+	
+});
