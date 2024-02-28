@@ -87,6 +87,7 @@ export default function PcbAssembly() {
 						<AssemblyPcbPriceSummary />
 						<PcbPriceEstimateAlert />
 						<ButtonWithSpinner
+							data-testid="add-to-cart-button"
 							isLoading={isLoading}
 							label={"Add to Cart"}
 							type="submit"

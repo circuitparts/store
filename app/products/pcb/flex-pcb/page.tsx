@@ -119,6 +119,7 @@ export default function FlexPcbFabrication() {
 						<FlexPcbPriceSummary />
 						<PcbPriceEstimateAlert />
 						<ButtonWithSpinner
+							data-testid="add-to-cart-button"
 							isLoading={isLoading}
 							label={"Add to Cart"}
 							type="submit"
