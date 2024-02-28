@@ -24,6 +24,7 @@ export default function Login() {
 				<CardFooter className="justify-between">
 					<div className="text-sm text-muted-foreground">
 						<Link
+							data-testid="signup-link"
 							href={SIGNUP_PAGE}
 							className="text-primary underline-offset-4 transition-colors hover:underline">
 							Create an account

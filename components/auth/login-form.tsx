@@ -56,6 +56,7 @@ export function LoginForm() {
 					<div className="grid gap-2">
 						<Label htmlFor="email">Email</Label>
 						<Field
+							data-testid="email-input"
 							as={Input}
 							id="email"
 							name="email"
@@ -69,6 +70,7 @@ export function LoginForm() {
 						<Label htmlFor="password">Password</Label>
 						<div className="relative">
 							<Field
+								data-testid="password-input"
 								as={Input}
 								id="password"
 								name="password"
@@ -85,6 +87,7 @@ export function LoginForm() {
 						</div>
 					</div>
 					<ButtonWithSpinner
+						data-testid="sign-in-button"
 						isLoading={isLoading}
 						label={"Sign In"}
 						type="submit"

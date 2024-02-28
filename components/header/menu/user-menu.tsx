@@ -24,6 +24,7 @@ export function UserMenu() {
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
 						<Button
+							data-testid="user-menu-trigger-button"
 							variant={"ghost"}
 							size={"icon"}>
 							<UserAvatar />
@@ -38,7 +39,11 @@ export function UserMenu() {
 							<Link href={ORDER_HISTORY_PAGE}>Order History</Link>
 						</DropdownMenuItem>
 						<DropdownMenuSeparator />
-						<DropdownMenuItem onClick={() => signOut()}>Log out</DropdownMenuItem>
+						<DropdownMenuItem
+							onClick={() => signOut()}
+							data-testid="logout-button">
+							Log out
+						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
 			</div>

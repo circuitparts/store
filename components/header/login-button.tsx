@@ -13,7 +13,8 @@ export function LoginButton() {
 				<Button
 					asChild
 					size={"sm"}
-					variant={"default"}>
+					variant={"default"}
+					data-testid="login-button">
 					<Link href={LOGIN_PAGE}>Login</Link>
 				</Button>
 			</div>

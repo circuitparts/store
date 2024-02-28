@@ -8,10 +8,10 @@ export async function CartButton() {
 	const cartItems = await fetchCartSizeAction();
 	return (
 		<Button
+			data-testid="cart-button"
 			variant={"ghost"}
 			size={"icon"}
-			asChild
-			>
+			asChild>
 			<Link href={SHOPPING_CART_PAGE}>
 				<div className="flex">
 					<Icons.cart />
