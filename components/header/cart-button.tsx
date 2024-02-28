@@ -10,11 +10,12 @@ export async function CartButton() {
 		<Button
 			variant={"ghost"}
 			size={"icon"}
-			asChild>
+			asChild
+			>
 			<Link href={SHOPPING_CART_PAGE}>
 				<div className="flex">
 					<Icons.cart />
-					{cartItems}
+					<p data-testid="cart-qty">{cartItems}</p>
 				</div>
 			</Link>
 		</Button>
