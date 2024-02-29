@@ -27,7 +27,7 @@ export function FlexPcbName() {
 				PCB Name <NameTip />
 			</Label>
 			<Input
-				data-testid="flex-pcb-name"
+				data-testid="pcb-name"
 				placeholder="Enter your Flex Pcb name"
 				type="text"
 				name="pcbname"

@@ -61,7 +61,7 @@ export default function PcbAssembly() {
 			<div className="mx-auto my-2 max-w-6xl px-4">
 				<h1
 					className=" text-3xl font-bold tracking-tight"
-					data-testid="pcb-assembly-fab-title">
+					data-testid="pcb-title">
 					PCB Assembly
 				</h1>
 				<div className="grid grid-cols-1 gap-y-3 lg:grid-cols-3 lg:gap-x-4">

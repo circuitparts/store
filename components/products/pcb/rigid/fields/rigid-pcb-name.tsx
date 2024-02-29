@@ -27,7 +27,7 @@ export function RigidPcbName() {
 				PCB Name <NameTip />
 			</Label>
 			<Input
-				data-testid="rigid-pcb-name"
+				data-testid="pcb-name"
 				placeholder="Enter your PCB name"
 				type="text"
 				name="pcbname"

@@ -52,7 +52,7 @@ export function FlexPcbPriceSummary() {
 						) : (
 							<p
 								className="font-medium"
-								data-testid="flex-pcb-quantity">
+								data-testid="pcb-quantity">
 								{orderedQuantity}
 							</p>
 						)}
@@ -64,7 +64,7 @@ export function FlexPcbPriceSummary() {
 						) : (
 							<p
 								className="text-base font-medium"
-								data-testid="flex-pcb-order-total">
+								data-testid="pcb-order-total">
 								{netPriceFormatted}
 							</p>
 						)}

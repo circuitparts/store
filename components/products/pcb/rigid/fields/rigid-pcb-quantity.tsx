@@ -34,7 +34,7 @@ export function RigidPcbQuantity() {
 				<DropdownLabel>
 					PCB Quantity <PcbQtyTip />
 				</DropdownLabel>
-				<DropdownContainer data-testid="rigid-pcb-quantity-dropdown">
+				<DropdownContainer data-testid="pcb-quantity-dropdown">
 					<DropdownTrigger>{pcbQty}</DropdownTrigger>
 					<DropdownContent>
 						<DropdownOptions>

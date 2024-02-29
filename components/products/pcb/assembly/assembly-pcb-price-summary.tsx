@@ -59,7 +59,7 @@ export function AssemblyPcbPriceSummary() {
 						) : (
 							<p
 								className="font-medium"
-								data-testid="price-summary-assembly-quantity">
+								data-testid="pcb-quantity">
 								{orderedQuantity}
 							</p>
 						)}
@@ -83,7 +83,7 @@ export function AssemblyPcbPriceSummary() {
 						) : (
 							<p
 								className="text-base font-medium"
-								data-testid="pcb-assembly-order-total">
+								data-testid="pcb-order-total">
 								{totalPriceFormatted}
 							</p>
 						)}

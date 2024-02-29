@@ -81,7 +81,7 @@ export function RigidUploadDesignFile() {
 			</Label>
 			<div className="flex gap-x-2">
 				<Input
-					data-testid="rigid-pcb-fab-upload-design-file"
+					data-testid="upload-pcb-design-file-input"
 					required
 					accept=".zip"
 					id="file"
@@ -91,7 +91,7 @@ export function RigidUploadDesignFile() {
 					onChange={handleFileChange}
 				/>
 				<ButtonWithSpinner
-					data-testid="rigid-pcb-fab-upload-design-file-button"
+					data-testid="upload-pcb-design-file-button"
 					isLoading={isLoading}
 					label={"Upload"}
 					onClick={handleFileUpload}
