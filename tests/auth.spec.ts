@@ -7,7 +7,7 @@ const EMPTY_CART_SIZE = "0";
 test("signup", async ({ page }) => {
 	await page.goto(BASE_URL);
 	const initialCartSize = await page.getByTestId("cart-qty").textContent(); // initial cart size
-	await addRigidPcbToCart({ page, cartSize: initialCartSize });
+	await addRigidPcbToCart({ page });
 	const newCartSize = `${Number(initialCartSize) + 1}`;
 	await expect(page.getByTestId("cart-qty")).toHaveText(newCartSize); // check if the cart size increased
 
@@ -26,7 +26,7 @@ test("signup", async ({ page }) => {
 test("login", async ({ page }) => {
 	await page.goto(BASE_URL);
 	const initialCartSize = await page.getByTestId("cart-qty").textContent(); // initial cart size
-	await addRigidPcbToCart({ page, cartSize: initialCartSize });
+	await addRigidPcbToCart({ page });
 	const newCartSize = `${Number(initialCartSize) + 1}`;
 	await expect(page.getByTestId("cart-qty")).toHaveText(newCartSize); // check if the cart size increased
 

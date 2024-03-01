@@ -5,6 +5,7 @@ import {
 	PART_RESULTS_PAGE,
 	PCB_ASSEMBLY_PAGE,
 	RIGID_PCB_FAB_PAGE,
+	SHOPPING_CART_PAGE,
 	SIGNUP_PAGE,
 } from "@/lib/constants/page-routes";
 import { expect, type Page } from "@playwright/test";
@@ -103,8 +104,8 @@ export async function uploadPcbDesignFile(page: Page) {
 	await expect(page.getByTestId("toast-title")).toHaveText("File upload success");
 }
 
-export async function addRigidPcbToCart(props: { page: Page; cartSize: string | null }) {
-	const { page, cartSize } = props;
+export async function addRigidPcbToCart(props: { page: Page }) {
+	const { page } = props;
 	await navigateToPcbPage({ page, pcbType: "rigid" });
 	await setPcbNameAndQuantity({
 		pcbType: "rigid",
@@ -119,13 +120,10 @@ export async function addRigidPcbToCart(props: { page: Page; cartSize: string | 
 	// add to cart
 	await page.getByTestId("add-to-cart-button").click();
 	await expect(page.getByTestId("toast-title")).toHaveText("Rigid PCB added to cart");
-
-	// check if the cart size increased
-	await expect(page.getByTestId("cart-qty")).toHaveText(`${Number(cartSize) + 1}`);
 }
 
-export async function addFlexPcbToCart(props: { page: Page; cartSize: string | null }) {
-	const { page, cartSize } = props;
+export async function addFlexPcbToCart(props: { page: Page }) {
+	const { page } = props;
 	await navigateToPcbPage({ page, pcbType: "flex" });
 	await setPcbNameAndQuantity({
 		pcbType: "flex",
@@ -140,13 +138,10 @@ export async function addFlexPcbToCart(props: { page: Page; cartSize: string | n
 	// add to cart
 	await page.getByTestId("add-to-cart-button").click();
 	await expect(page.getByTestId("toast-title")).toHaveText("Flex PCB added to cart");
-
-	// check if the cart size increased
-	await expect(page.getByTestId("cart-qty")).toHaveText(`${Number(cartSize) + 1}`);
 }
 
-export async function addPcbAssemblyToCart(props: { page: Page; cartSize: string | null }) {
-	const { page, cartSize } = props;
+export async function addPcbAssemblyToCart(props: { page: Page }) {
+	const { page } = props;
 	await navigateToPcbPage({ page, pcbType: "assembly" });
 	await setPcbNameAndQuantity({
 		pcbType: "assembly",
@@ -161,9 +156,6 @@ export async function addPcbAssemblyToCart(props: { page: Page; cartSize: string
 	// add to cart
 	await page.getByTestId("add-to-cart-button").click();
 	await expect(page.getByTestId("toast-title")).toHaveText("PCB Assembly added to cart");
-
-	// check if the cart size increased
-	await expect(page.getByTestId("cart-qty")).toHaveText(`${Number(cartSize) + 1}`);
 }
 
 export async function signup(props: { page: Page }) {
@@ -208,4 +200,42 @@ export async function logout(props: { page: Page }) {
 	const { page } = props;
 	await page.getByTestId("user-menu-trigger-button").click();
 	await page.getByTestId("logout-button").click();
+}
+
+export async function addNthComponentToCart(props: { nth: number; page: Page }) {
+	const { nth, page } = props;
+	await page.getByTestId("part-results-table-row").nth(nth).click(); // navigate to the detail page
+	await page.getByTestId("add-part-to-cart-button").click();
+	await expect(page.getByTestId("toast-title")).toHaveText("Added to cart");
+	await page.goBack();
+}
+
+export async function deleteNthCartComponent(props: { nth: number; page: Page; cartSize: string | null }) {
+	const { nth, page, cartSize } = props;
+	await page.goto(BASE_URL + SHOPPING_CART_PAGE);
+	await page.getByTestId("basket-parts-tbody-row").nth(nth).getByTestId("delete-cart-item-button").click();
+	const newCartSize = `${Number(cartSize) - 1}`;
+	await expect(page.getByTestId("cart-qty")).toHaveText(newCartSize);
+}
+
+export async function deleteNthCartPcb(props: { nth: number; page: Page; cartSize: string | null }) {
+	const { nth, page, cartSize } = props;
+	await page.goto(BASE_URL + SHOPPING_CART_PAGE);
+	await page.getByTestId("basket-pcbs-tbody-row").nth(nth).getByTestId("delete-cart-item-button").click();
+	const newCartSize = `${Number(cartSize) - 1}`;
+	await expect(page.getByTestId("cart-qty")).toHaveText(newCartSize);
+}
+
+export async function deleteAllCartComponents(props: { page: Page }) {
+	const { page } = props;
+	await page.goto(BASE_URL + SHOPPING_CART_PAGE);
+	await page.getByTestId("basket-parts-thead-row").getByTestId("delete-all-cart-items-button").click();
+	await expect(page.getByTestId("cart-qty")).toHaveText("0");
+}
+
+export async function deleteAllCartPcbs(props: { page: Page }) {
+	const { page } = props;
+	await page.goto(BASE_URL + SHOPPING_CART_PAGE);
+	await page.getByTestId("basket-pcbs-thead-row").getByTestId("delete-all-cart-items-button").click();
+	await expect(page.getByTestId("cart-qty")).toHaveText("0");
 }
