@@ -100,6 +100,7 @@ export function VerifyEmailForm() {
 				<Form className="space-y-2">
 					<div className="grid gap-2">
 						<Field
+							data-testid="verify-email-code-input"
 							as={Input}
 							id="code"
 							name="code"
@@ -112,6 +113,7 @@ export function VerifyEmailForm() {
 						/>
 					</div>
 					<ButtonWithSpinner
+						data-testid="verify-email-submit-button"
 						className="w-full"
 						isLoading={isLoading}
 						label={"Verify Email"}

@@ -28,7 +28,9 @@ export default async function PartResults({ params: { query } }: PartResultsType
 
 	return (
 		<div className="mt-4 space-y-6">
-			<h1 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+			<h1
+				data-testid="part-results-title"
+				className="scroll-m-20 text-2xl font-semibold tracking-tight">
 				Parts matching {decodeURIComponent(query)}
 			</h1>
 			<Table>

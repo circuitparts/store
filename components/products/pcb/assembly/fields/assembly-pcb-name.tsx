@@ -27,6 +27,7 @@ export function AssemblyPcbName() {
 				PCB Name <PcbNameTip />
 			</Label>
 			<Input
+				data-testid="pcb-name"
 				placeholder="Enter your project name"
 				type="text"
 				name="projectName"

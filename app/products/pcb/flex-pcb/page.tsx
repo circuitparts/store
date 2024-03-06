@@ -75,7 +75,11 @@ export default function FlexPcbFabrication() {
 	return (
 		<form onSubmit={handleOnSubmit}>
 			<div className="mx-auto my-2 max-w-6xl px-4">
-				<h1 className=" text-3xl font-bold tracking-tight">Flex Pcb Fabrication</h1>
+				<h1
+					className=" text-3xl font-bold tracking-tight"
+					data-testid="pcb-title">
+					Flex Pcb Fabrication
+				</h1>
 				<div className="grid grid-cols-1 gap-y-3 lg:grid-cols-3 lg:gap-x-4">
 					<div className="mt-5 grid grid-cols-1 gap-y-6 sm:col-span-2 sm:grid-cols-2 sm:gap-x-4">
 						<FlexPcbName />
@@ -115,6 +119,7 @@ export default function FlexPcbFabrication() {
 						<FlexPcbPriceSummary />
 						<PcbPriceEstimateAlert />
 						<ButtonWithSpinner
+							data-testid="add-to-cart-button"
 							isLoading={isLoading}
 							label={"Add to Cart"}
 							type="submit"

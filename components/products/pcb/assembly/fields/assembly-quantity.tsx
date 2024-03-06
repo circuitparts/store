@@ -17,6 +17,7 @@ export function AssemblyQuantity() {
 				<AssemblyQtyTip />
 			</Label>
 			<Input
+				data-testid="pcb-assembly-quantity"
 				placeholder="Enter assembly quantity"
 				type="text"
 				name="AssemblyQty"

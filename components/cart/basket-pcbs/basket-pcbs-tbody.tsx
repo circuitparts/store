@@ -25,7 +25,9 @@ export function BasketPcbsTbody(props: { pcbs: PcbType[] }) {
 				const serialNum = pcbIdx + 1;
 				const { Name, Type, OrderedQty } = pcb;
 				return (
-					<TableRow key={serialNum}>
+					<TableRow
+						key={serialNum}
+						data-testid="basket-pcbs-tbody-row">
 						<TableCell>{serialNum}</TableCell>
 						<TableCell>
 							<PcbDetails pcb={pcb} />

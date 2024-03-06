@@ -70,6 +70,7 @@ export function PartOrderForm({ partData }: { partData: PartDataType }) {
 						</div>
 						<div className="mt-4">
 							<ButtonWithSpinner
+								data-testid="add-part-to-cart-button"
 								isLoading={isLoading}
 								label={"Add to Shopping Cart"}
 								type="submit"

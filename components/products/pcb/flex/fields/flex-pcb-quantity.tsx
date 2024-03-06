@@ -33,7 +33,7 @@ export function FlexPcbQuantity() {
 				<DropdownLabel>
 					PCB Quantity <PcbQtyTip />
 				</DropdownLabel>
-				<DropdownContainer>
+				<DropdownContainer data-testid="pcb-quantity-dropdown">
 					<DropdownTrigger>{pcbQty}</DropdownTrigger>
 					<DropdownContent>
 						<DropdownOptions>

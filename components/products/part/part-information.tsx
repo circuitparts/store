@@ -10,7 +10,11 @@ export function PartInformation({ partData }: { partData: PartDataType }) {
 	return (
 		<div>
 			<div className="mt-4">
-				<h1 className="text-3xl font-bold tracking-tight">{Name}</h1>
+				<h1
+					data-testid="part-name"
+					className="text-3xl font-bold tracking-tight">
+					{Name}
+				</h1>
 			</div>
 
 			<section className="mt-4">

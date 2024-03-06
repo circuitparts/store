@@ -30,7 +30,9 @@ export function BasketPartsTbody(props: { parts: PartDataType[] }) {
 				const serialNum = partIdx + 1;
 
 				return (
-					<TableRow key={serialNum}>
+					<TableRow
+						key={serialNum}
+						data-testid="basket-parts-tbody-row">
 						<TableCell>{serialNum}</TableCell>
 						<TableCell>
 							<p>{Name}</p>

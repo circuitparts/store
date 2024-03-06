@@ -47,11 +47,27 @@ export function FlexPcbPriceSummary() {
 					</div>
 					<div className="flex items-center justify-between py-4">
 						<p>Quantity</p>
-						{isLoading ? <LineSkeleton /> : <p className="font-medium">{orderedQuantity}</p>}
+						{isLoading ? (
+							<LineSkeleton />
+						) : (
+							<p
+								className="font-medium"
+								data-testid="pcb-quantity">
+								{orderedQuantity}
+							</p>
+						)}
 					</div>
 					<div className="flex items-center justify-between py-4">
 						<p className="text-base font-medium">Order total</p>
-						{isLoading ? <LineSkeleton /> : <p className="text-base font-medium">{netPriceFormatted}</p>}
+						{isLoading ? (
+							<LineSkeleton />
+						) : (
+							<p
+								className="text-base font-medium"
+								data-testid="pcb-order-total">
+								{netPriceFormatted}
+							</p>
+						)}
 					</div>
 					<div className="flex items-center justify-between py-4">
 						<p className="">Tentative Lead Time</p>

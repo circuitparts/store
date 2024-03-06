@@ -4,6 +4,7 @@
 	"installation": "Installation",
 	"project-structure": "Project Structure",
 	"how-to-contribute": "How to Contribute",
+	"testing": "Running Tests",
 	"commit-guide": "Commit Message Guidelines",
 	"coding-guide": "Coding Guidelines",
 	"uncommit-guide": "Guidelines to uncommit npm lock file",

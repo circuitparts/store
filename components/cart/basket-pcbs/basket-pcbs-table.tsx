@@ -12,7 +12,7 @@ export async function BasketPcbsTable(props: { pcbs: PcbType[] }) {
 			<h3 className="text-lg font-semibold">PCB Fabrication/Assembly</h3>
 			<Table>
 				<TableHeader>
-					<TableRow>
+					<TableRow data-testid="basket-pcbs-thead-row">
 						<TableHead className="w-[10px]">S.No.</TableHead>
 						<TableHead>PCB Fabrication/Assembly Details</TableHead>
 						<TableHead className="w-[230px] hidden lg:table-cell">Quantity</TableHead>
