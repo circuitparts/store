@@ -10,16 +10,17 @@ import {
 	HELP_CENTER_PAGE,
 	PRIVACY_POLICY_PAGE,
 	SHIPPING_AND_RETURNS_PAGE,
-	TERMS_AND_CONDITIONS_PAGE
+	TERMS_AND_CONDITIONS_PAGE,
+	WHY_OPEN_SOURCE_PAGE,
 } from "@/lib/constants/page-routes";
 import { getCurrentYear } from "@/lib/utils";
 import Link from "next/link";
 
 const footerOptions = [
-	{ id: 1, name: "About", url: ABOUT_PAGE, target: "_blank"},
-	{ id: 2, name: "Privacy Policy", url: PRIVACY_POLICY_PAGE, target: "_blank"},
-	{ id: 3, name: "Terms & Conditions", url: TERMS_AND_CONDITIONS_PAGE, target: "_blank"},
-	{ id: 4, name: "Shipping & Returns", url: SHIPPING_AND_RETURNS_PAGE, target: "_blank"},
+	{ id: 1, name: "About", url: ABOUT_PAGE, target: "_blank" },
+	{ id: 2, name: "Privacy Policy", url: PRIVACY_POLICY_PAGE, target: "_blank" },
+	{ id: 3, name: "Terms & Conditions", url: TERMS_AND_CONDITIONS_PAGE, target: "_blank" },
+	{ id: 4, name: "Shipping & Returns", url: SHIPPING_AND_RETURNS_PAGE, target: "_blank" },
 	{ id: 5, name: "Help Center", url: HELP_CENTER_PAGE, target: "_blank" },
 	{ id: 6, name: "Docs", url: DOCS_PAGE, target: "_blank" },
 	{ id: 7, name: "Github", url: GITHUB_REPO, target: "_blank" },
@@ -54,8 +55,9 @@ export function Footer() {
 				Made with <Icons.HeartFilledIcon className="mx-1" /> in {PLATFORM_ORIGIN_COUNTRY} | Proudly
 				<span className="ml-1">
 					<Link
-						href={GITHUB_REPO}
-						target="_blank">
+						href={WHY_OPEN_SOURCE_PAGE}
+						target="_blank"
+						className="underline">
 						Open-source software.
 					</Link>
 				</span>

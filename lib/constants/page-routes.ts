@@ -51,7 +51,7 @@ export const CONTACT_US_PAGE = "/contact-us";
 export const COMING_SOON_PAGE = "/coming-soon";
 export const ABOUT_PAGE = "/about";
 export const ROAD_MAP_PAGE = "/roadmap";
-// export const BLOG_PAGE = "/blog";
+export const WHY_OPEN_SOURCE_PAGE = "/contributors-guide/why-open-source";
 
 // docs
 export const DOCS_PAGE = "/docs";
