@@ -21,6 +21,12 @@ We engineered a new approach — A digital quote-to-order platform. It provides 
 
 [![CircuitParts](./public/images/screenshots/home.png)](https://circuitparts.in/)
 
+## Why open source?
+
+Circuit Parts is an open source project. The code for Circuit Parts is available under MIT License. So the question is, why are we doing this?
+
+Read: [Why Circuit Parts is Open Source](https://www.circuitparts.in//contributors-guide/why-open-source) to understand our motivation behind making Circuit Parts open source.
+
 ## Built with 🛠️
 
 -   [Next.js](https://nextjs.org) - React framework for building performant apps.

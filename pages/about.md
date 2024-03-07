@@ -1,21 +1,29 @@
-# What is Circuit Parts?
+# About Circuit Parts
 
-Let's quickly introduce you to Circuit Parts and what you can do with it. We have a shorter explaination and a longer one. You can choose to read either one or both. We'd suggest you read the longer one where we explain the problem we are trying to solve and how we are solving it. We hope it is an interesting read.
+If you are reading this, then you're probably interested in finding out why we built Circuit Parts. Well, you've come to the right place.
 
-## The shorter version
+If you are a Hardware Design Engineer, then you likely have fifteen tabs open in your browser: one for inventory management, one for a component search engine, one for a design calculator, at least three to four component distributor websites, a couple more websites for PCB fabrication and assembly, and on, and on… oh, let’s not forget, each website has its own interface and login.
 
-Circuit Parts is a digital quote-to-order Platform. It allows users to easily search components using manufacturer part number, specify quantities, and add items to their cart. In addition to component ordering, users can upload their PCB design files, receive instant quotes, and place orders for their custom designs.
+While the problem might sound familiar to a Hardware Design Engineer, the underlying problem is actually quite common. Imagine you're planning a camping trip and you need to buy various supplies: tents, sleeping bags, cooking equipment, and first-aid kits etc. What do you think is easier and much more efficient?
 
-## The longer version
+1. Running around numerous stores in your town to buy all your supplies or
+2. Just walking into a single store like Walmart that carries everything you need?
 
-If you were to open up your mobile phone, or as a matter of fact any modern electronic device and examine, you’d find a Printed Circuit Board or a PCB in short. This PCB is packed with full of electronic components ranging from tens to even thousands of components on single board depending on the product. These components are interconnected to form a circuit which makes the device function.
+That’s where [Circuit Parts](https://circuitparts.in) comes in. We want to streamline the way you order components, PCBs and PCBAs. As a first step, we are consolidating much of your workflow into a single,**all-in-one shopping platform for embedded electronics.**
 
-Now imagine you were to design and build this product. After months of work, you have the design files (blueprints) and Bill of Materials (shopping list) ready to start manufacturing. That's where things start to get complicated...The traditional process of finding, vetting, and managing suppliers, getting quotes, and tracking orders across many component distributors and PCB manufacturers is incredibly resource-intensive and prone to miscommunication, delays, and mistakes. These barriers make hardware development a slow, painful, high-risk endeavor.
+**But wait, there's more!** We want to create a comprehensive platform for all your electronic manufacturing needs. We have a ton of stuff on our roadmap that will be available for our users in the coming months:
 
-### Our Solution
+1. **Project Management Tool:** Create a new project and add your Bill of Materials (BOM) to the project making it easier to organise shopping list as per projects and order the parts with just a few clicks.
+2. **AI based part recommendation:** Our AI based recommendation system will suggest the best parts for your project based on your requirements. For example, you can ask “Create a list of components needed to build a 555 timer circuit” and our AI jumps into action and suggests you all the parts needed to build a 555 timer circuit. Not just that, it even adds them to your cart. How cool is that?
+3. **Download ECAD symbols, Footprints and 3D models:** Search for a part on the platform, and you'll find associated ECAD symbols, footprints, and 3D models readily available for download in compatible formats.
+4. **Electronic Design Calculators:** No more manual calculations. Use our calculators to get the right values based on the current IPC standards.
+5. **Extensions for ECAD tools:** Integrate our extensions with your existing ECAD software for seamless ordering of components and PCBs directly from within your CAD tools.
+6. **Inventory management:** Organise inventory with our inventory management tool that seamlessly integrates with our ordering platform letting users order parts with just couple of clicks.
 
-We engineered a new approach — A digital quote-to-order platform. It provides a convenient place for individuals and businesses to purchase electronic and semiconductor components, upload designs and receive instant quotes for PCB fabrication and assembly, all in one place, eliminating the need to navigate multiple websites.
+And there’s more…😉
 
+We hope you’ve gained a good sense of why we started Circuit Parts. Challenging the status quo is no easy task, but we invite you to check out the platform, order some products, and help us improve it further.
 
 ## Next up
+
 Feeling like an eager beaver? Jump in to the [quick start](quick-start/signup-account.md) to signup and start placing orders on our platform.
