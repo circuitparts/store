@@ -5,7 +5,7 @@ Welcome to the Circuit Parts How to Guides! Here you can find answers to common 
 ## How to:
 
 -   [Create an account](signup-account.md)
--   [Search and order components](order-component.mdx)
+-   [Search and order components](search-component.mdx)
 -   [Use Bill of Materials (BOM) Tool to Order Components](bom-tool.md)
 -   [Order PCB Fabrication and Assembly](order-pcb.mdx)
 -   [Change currency](change-currency.md)
