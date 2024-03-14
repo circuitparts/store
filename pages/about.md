@@ -2,7 +2,11 @@
 
 If you are reading this, then you're probably interested in finding out why we built Circuit Parts. Well, you've come to the right place.
 
-If you are a Hardware Design Engineer, then you likely have fifteen tabs open in your browser: one for inventory management, one for a component search engine, one for a design calculator, at least three to four component distributor websites, a couple more websites for PCB fabrication and assembly, and on, and on… oh, let’s not forget, each website has its own interface and login.
+If you are a Hardware Design Engineer then you know the struggle is real. When it comes to building your prototype, you likely have fifteen tabs open in your browser: one for inventory management, one for a component search engine, one for a design calculator, at least three to four component distributor websites, a couple more websites for PCB fabrication and assembly, and on, and on… oh, let’s not forget, each website has its own interface and login.
+
+Here's the twist: We asked ourselves the same question:
+
+**"Why isn't there a single platform where I can order all the electronic components and PCBs I need, and let the platform handle the sourcing and logistics for me?"**
 
 While the problem might sound familiar to a Hardware Design Engineer, the underlying problem is actually quite common. Imagine you're planning a camping trip and you need to buy various supplies: tents, sleeping bags, cooking equipment, and first-aid kits etc. What do you think is easier and much more efficient?
 

@@ -57,13 +57,13 @@ export const WHY_OPEN_SOURCE_PAGE = "/contributors-guide/why-open-source";
 export const DOCS_PAGE = "/docs";
 
 // help center
-export const HELP_CENTER_PAGE = "/help-center/introduction";
-export const SEARCH_COMPONENTS_HELP_PAGE = "/help-center/search-component";
-export const BOM_HELP_PAGE = "/help-center/bom-tool";
-export const PCB_FAB_HELP_PAGE = "/help-center/order-pcb";
-export const CART_HELP_PAGE = "/help-center/manage-cart";
-export const CHECKOUT_HELP_PAGE = "/help-center/checkout";
-export const ORDER_HISTORY_HELP_PAGE = "/help-center/order-history";
+export const HOW_TO_GUIDES_PAGE = "/how-to-guides/introduction";
+export const SEARCH_COMPONENTS_HELP_PAGE = "/how-to-guides/search-component";
+export const BOM_HELP_PAGE = "/how-to-guides/bom-tool";
+export const PCB_FAB_HELP_PAGE = "/how-to-guides/order-pcb";
+export const CART_HELP_PAGE = "/how-to-guides/manage-cart";
+export const CHECKOUT_HELP_PAGE = "/how-to-guides/checkout";
+export const ORDER_HISTORY_HELP_PAGE = "/how-to-guides/order-history";
 
 // github
 export const GITHUB_REPO = "https://github.com/circuitparts/store";

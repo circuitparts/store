@@ -2,7 +2,7 @@ import { Icons } from "@/components/ui/icons";
 import {
 	DOCS_PAGE,
 	FLEX_PCB_FAB_PAGE,
-	HELP_CENTER_PAGE,
+	HOW_TO_GUIDES_PAGE,
 	HOME_PAGE,
 	PCB_ASSEMBLY_PAGE,
 	PCB_TECH_CAPABILITIES_PAGE,
@@ -47,11 +47,11 @@ export const navigationOptions = [
 	},
 	{
 		id: 6,
-		name: "Help Center",
-		href: HELP_CENTER_PAGE,
+		name: "How to Guides",
+		href: HOW_TO_GUIDES_PAGE,
 		icon: Icons.GiHelp,
 		target: "_blank",
-		testid: "help-center-nav-link",
+		testid: "how-to-guides-nav-link",
 	},
 	{
 		id: 7,

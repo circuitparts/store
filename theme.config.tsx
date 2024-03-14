@@ -30,9 +30,11 @@ const config: DocsThemeConfig = {
 	chat: {
 		link: "https://discord.gg/B4CCqBEH",
 	},
-
 	darkMode: false,
 	docsRepositoryBase: "https://github.com/circuitparts/store/tree/main/pages",
+	sidebar: {
+		defaultMenuCollapseLevel: 1,
+	},
 	footer: {
 		text: (
 			<span>
