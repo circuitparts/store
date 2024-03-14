@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { HELP_CENTER_PAGE, HOME_PAGE } from "@/lib/constants/page-routes";
+import { HOW_TO_GUIDES_PAGE, HOME_PAGE } from "@/lib/constants/page-routes";
 import Link from "next/link";
 
 export function EmptyShoppingCart() {
@@ -15,7 +15,7 @@ export function EmptyShoppingCart() {
 						<Link href={HOME_PAGE}>Start Shopping</Link>
 					</Button>
 					<Link
-						href={HELP_CENTER_PAGE}
+						href={HOW_TO_GUIDES_PAGE}
 						className="text-sm font-semibold text-gray-900">
 						Help Center <span aria-hidden="true">&rarr;</span>
 					</Link>
