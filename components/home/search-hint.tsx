@@ -1,4 +1,4 @@
-import { STM32MP1_RESULTS_PAGE_URL } from "@/lib/constants/page-routes";
+import { SEARCH_COMPONENTS_HELP_PAGE, STM32MP1_RESULTS_PAGE_URL } from "@/lib/constants/page-routes";
 import Link from "next/link";
 
 export function SearchHint() {
@@ -13,7 +13,7 @@ export function SearchHint() {
 			Need help?{" "}
 			<Link
 				className="underline"
-				href={STM32MP1_RESULTS_PAGE_URL}>
+				href={SEARCH_COMPONENTS_HELP_PAGE}>
 				Learn How to Search
 			</Link>
 		</p>
