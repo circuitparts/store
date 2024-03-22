@@ -68,3 +68,6 @@ export const ORDER_HISTORY_HELP_PAGE = "/how-to-guides/order-history";
 // github
 export const GITHUB_REPO = "https://github.com/circuitparts/store";
 export const DISCORD_SERVER = "https://discord.gg/B4CCqBEH";
+
+// saved projects
+export const SAVED_PROJECTS_PAGE = "/saved-projects"

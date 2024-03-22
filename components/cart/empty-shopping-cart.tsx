@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { HOW_TO_GUIDES_PAGE, HOME_PAGE } from "@/lib/constants/page-routes";
+import { HOW_TO_GUIDES_PAGE, HOME_PAGE, SAVED_PROJECTS_PAGE } from "@/lib/constants/page-routes";
 import Link from "next/link";
 
 export function EmptyShoppingCart() {
@@ -13,6 +13,11 @@ export function EmptyShoppingCart() {
 				<div className="mt-6 flex items-center justify-center gap-x-6">
 					<Button asChild>
 						<Link href={HOME_PAGE}>Start Shopping</Link>
+					</Button>
+					<Button
+						asChild
+						variant={"outline"}>
+						<Link href={SAVED_PROJECTS_PAGE}>View Saved Projects</Link>
 					</Button>
 					<Link
 						href={HOW_TO_GUIDES_PAGE}
