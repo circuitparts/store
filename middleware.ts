@@ -2,7 +2,7 @@ import { AUTH_PAGES } from "@/lib/constants/page-routes";
 import { authMiddleware } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
-const privateRoutes = ["account", "checkout", "order-history", "order-status"];
+const privateRoutes = ["account", "checkout", "order-history", "order-status", "saved-projects"];
 const publicRoutesRegExp = new RegExp(`^(?!\/(${privateRoutes.join("|")})).*$`); // Matches any route that doesn't start with /account, /checkout, /order-history, or /order-status
 
 export default authMiddleware({

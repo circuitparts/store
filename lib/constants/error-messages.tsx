@@ -21,3 +21,6 @@ export const EMPTY_PHONE_NUM_ERROR = "Please enter your phone number";
 export const PHONE_NUM_VALIDATION_ERROR = "Phone number should be 10 digits";
 export const POSTAL_CODE_ERROR = "Postal code should be 6 digits";
 export const ADDRESS_MATCH_ERROR = "Please check if addresses are same";
+
+// saved projects
+export const SAME_PROJECT_NAME_ERROR = "A project with same name already exists. Please use a different name.";

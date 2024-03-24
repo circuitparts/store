@@ -1,6 +1,5 @@
+import { NewProjectForm } from "@/components/saved-projects/new-project-form";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { HOW_TO_GUIDES_PAGE } from "@/lib/constants/page-routes";
 import Link from "next/link";
@@ -15,17 +14,11 @@ export function EmptyProject() {
 				</p>
 				<div className="mt-6 flex items-center justify-center gap-x-6">
 					<Popover>
-						<PopoverTrigger>
+						<PopoverTrigger asChild>
 							<Button>Create New Project</Button>
 						</PopoverTrigger>
 						<PopoverContent className="space-y-2">
-							<Label>Enter your Project Name</Label>
-							<Input
-								placeholder="Enter your project name"
-								id="project_name"
-								name="project_name"
-							/>
-							<Button>Create Project</Button>
+							<NewProjectForm />
 						</PopoverContent>
 					</Popover>
 					<Link

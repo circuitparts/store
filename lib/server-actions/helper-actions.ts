@@ -18,6 +18,7 @@ import type { CartDataType, CartItemType, CartItemsType } from "@/types/cart-typ
 import type { CheckoutDataPropsType } from "@/types/checkout-types";
 import type { CurrencyType } from "@/types/currency-types";
 import type { OpenOrderType, OrderType } from "@/types/order-types";
+import type { SavedProjectType } from "@/types/saved-project-types";
 import type { SignupPropsType, UserType } from "@/types/user-types";
 import { CopyObjectCommand, DeleteObjectCommand, ListObjectsV2Command } from "@aws-sdk/client-s3";
 import { auth } from "@clerk/nextjs";
@@ -42,6 +43,7 @@ export async function createNewUser(props: SignupPropsType): Promise<UserType> {
 		},
 		s3FileDir: null,
 		orders: [],
+		savedProjects: [],
 	};
 }
 
@@ -439,5 +441,19 @@ export default async function parseCsvFile(file: File): Promise<ParsedBomDataObj
 	} catch (error) {
 		console.error(CONSOLE_RED_TEXT, `PARSE CSV FILE FAULT => ${error as string}`);
 		throw error;
+	}
+}
+
+// saved project
+export async function fetchSavedProjects(): Promise<SavedProjectType[] | null | Error> {
+	try {
+		await mongoClient.connect();
+		const options = { projection: { _id: 0, savedProjects: 1 } };
+		const { userId } = auth();
+		const userFilter = { userId };
+		const userResults = await usersCollection.findOne<{ savedProjects: SavedProjectType[] }>(userFilter, options);
+		return userResults ? userResults.savedProjects : null;
+	} catch (error) {
+		return handleApiRequestError(error, "FETCH SAVED PROJECTS FAULT");
 	}
 }
