@@ -8,3 +8,7 @@ export interface DeleteCartItemButtonProps extends ButtonProps {
 export interface DeleteAllCartItemsButtonProps extends ButtonProps {
 	itemType: "PCB" | "Part";
 }
+
+export interface DeleteProjectButtonProps extends ButtonProps {
+	projectName: string;
+}

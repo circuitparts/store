@@ -35,7 +35,7 @@ export default function ViewSavedProjects(props: { savedProjects: SavedProjectTy
 								<TableCell>{project.createdAt.toLocaleString()}</TableCell>
 								<TableCell>{project.cartItems.length}</TableCell>
 								<TableCell>
-									<DeleteProjectButton />
+									<DeleteProjectButton projectName={project.name} />
 								</TableCell>
 							</TableRow>
 						);

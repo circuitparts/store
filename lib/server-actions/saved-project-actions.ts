@@ -34,3 +34,21 @@ export async function createNewSavedProjectAction(name: string): Promise<void> {
 		throw error; // handled on the client side.
 	}
 }
+
+export async function deleteProjectAction(name: string): Promise<void> {
+	const { userId } = auth();
+	const filter = { userId };
+	try {
+		const savedProjects = await fetchSavedProjects();
+		if (savedProjects instanceof Error) throw savedProjects;
+
+		if (savedProjects) {
+			const updatedProjects = savedProjects.filter(project => project.name !== name);
+			await mongoClient.connect();
+			await usersCollection.updateOne(filter, { $set: { savedProjects: updatedProjects } });
+			revalidatePath(SAVED_PROJECTS_PAGE);
+		}
+	} catch (error) {
+		throw error; // handle on the client side.
+	}
+}

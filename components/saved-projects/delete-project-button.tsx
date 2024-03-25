@@ -1,14 +1,24 @@
 "use client";
-import { Button, type ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
+import { useToast } from "@/components/ui/use-toast";
+import { deleteProjectAction } from "@/lib/server-actions/saved-project-actions";
+import type { DeleteProjectButtonProps } from "@/types/delete-button-types";
 import { useTransition } from "react";
 
-export function DeleteProjectButton({ ...buttonProps }: ButtonProps) {
+export function DeleteProjectButton({ projectName, ...buttonProps }: DeleteProjectButtonProps) {
 	const [isLoading, startTransition] = useTransition();
+	const { toast } = useToast();
 
 	function handleOnClick() {
 		startTransition(async () => {
-			throw new Error("Delete function not implemented");
+			await deleteProjectAction(projectName);
+			toast({
+				variant: "default",
+				title: "Success",
+				description: `Your project "${projectName}" has been successfully deleted.`,
+				duration: 5000,
+			});
 		});
 	}
 
