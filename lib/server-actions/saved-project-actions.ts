@@ -1,9 +1,11 @@
 "use server";
 import { SAME_PROJECT_NAME_ERROR } from "@/lib/constants/error-messages";
 import { mongoClient, usersCollection } from "@/lib/constants/mongo";
+import { SAVED_PROJECTS_PAGE } from "@/lib/constants/page-routes";
 import { fetchSavedProjects } from "@/lib/server-actions/helper-actions";
 import type { SavedProjectType } from "@/types/saved-project-types";
 import { auth } from "@clerk/nextjs";
+import { revalidatePath } from "next/cache";
 
 export async function createNewSavedProjectAction(name: string): Promise<void> {
 	const { userId } = auth();
@@ -23,6 +25,7 @@ export async function createNewSavedProjectAction(name: string): Promise<void> {
 				};
 				await mongoClient.connect();
 				await usersCollection.updateOne(filter, { $push: { savedProjects: newProject } });
+				revalidatePath(SAVED_PROJECTS_PAGE);
 			} else {
 				throw new Error(SAME_PROJECT_NAME_ERROR);
 			}
