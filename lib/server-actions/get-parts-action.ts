@@ -12,7 +12,14 @@ export async function getPartsAction(partName: string) {
 		// check cache first
 		if (cachedData) {
 			console.log(CONSOLE_GREEN_TEXT, "GETTING DATA FROM CACHE");
-			return JSON.parse(cachedData) as PartResultsType;
+			try {
+				return typeof cachedData === 'string' 
+					? JSON.parse(cachedData) as PartResultsType
+					: cachedData as PartResultsType;
+			} catch (error) {
+				console.error('Error parsing cached data:', error);
+				return null;
+			}
 		}
 		// no cached data available
 		console.log(CONSOLE_GREEN_TEXT, "FETCHING DATA FROM API");

@@ -11,6 +11,7 @@ export const env = createEnv({
 		AWS_REGION: z.string().min(1),
 		AWS_BUCKET_NAME: z.string().min(1),
 		REDIS_URL: z.string().url(),
+		REDIS_TOKEN: z.string().min(1),
 		RESEND_API_KEY: z.string().min(1),
 		STRIPE_SECRET_KEY: z.string().min(1),
 	},
@@ -38,6 +39,7 @@ export const env = createEnv({
 
 		// redis
 		REDIS_URL: process.env.REDIS_URL,
+		REDIS_TOKEN: process.env.REDIS_TOKEN,
 
 		// email
 		RESEND_API_KEY: process.env.RESEND_API_KEY,

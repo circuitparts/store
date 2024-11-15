@@ -33,6 +33,7 @@
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.3.0",
     "@t3-oss/env-nextjs": "^0.7.1",
+    "@upstash/redis": "^1.34.3",
     "@vercel/analytics": "^1.2.0",
     "aws-sdk": "^2.1497.0",
     "class-variance-authority": "^0.7.0",
