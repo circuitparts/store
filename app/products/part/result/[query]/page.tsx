@@ -19,6 +19,10 @@ type PartResultsType = {
 
 export default async function PartResults({ params: { query } }: PartResultsType) {
 	const response = await getPartsAction(query);
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	if(response === null) {
+		return notFound();
+	}
 	const parts = response.Parts;
 	const partNumbers = Object.keys(parts);
 

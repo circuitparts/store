@@ -32,22 +32,24 @@ export async function POST(request: Request) {
 		};
 
 		responses.forEach(response => {
-			for (const [key, value] of Object.entries(response.Parts)) {
-				if (parsedDataNames.has(key.toUpperCase())) {
-					// Only add the part to the map if it's not already present
+			if(response !== null){
+				for (const [key, value] of Object.entries(response.Parts)) {
+					if (parsedDataNames.has(key.toUpperCase())) {
+						// Only add the part to the map if it's not already present
 
-					// Find the corresponding part in parsedData
-					const correspondingPart = parsedData.find(
-						part => part.ManufacturerPartNumber.toUpperCase() === key.toUpperCase()
-					);
+						// Find the corresponding part in parsedData
+						const correspondingPart = parsedData.find(
+							part => part.ManufacturerPartNumber.toUpperCase() === key.toUpperCase()
+						);
 
-					// Update the OrderedQty value
-					value.OrderedQty = correspondingPart ? parseInt(correspondingPart.Quantity) : 0;
+						// Update the OrderedQty value
+						value.OrderedQty = correspondingPart ? parseInt(correspondingPart.Quantity) : 0;
 
-					uniqueParts[key] = {
-						Parts: { [key]: value },
-						Errors: null,
-					};
+						uniqueParts[key] = {
+							Parts: { [key]: value },
+							Errors: null,
+						};
+					}
 				}
 			}
 		});

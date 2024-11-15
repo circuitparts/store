@@ -15,7 +15,10 @@ export async function generateMetadata({ params }: { params: { query: string } }
 
 export default async function PartDetail({ params: { query } }: { params: { query: string } }) {
 	const response = await getPartsAction(query);
-	const parts = response.Parts;
+	if (response === null) {
+		return notFound();
+	}
+	const parts = response.Parts
 	const partData = parts[query];
 
 	if (Object.keys(parts).length === 0) {
